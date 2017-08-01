@@ -9,11 +9,4 @@
             <polygon id="Triangle" points="299 45 294 35 304 35"></polygon>
         </g>
     </g>
-</svg>nsform="translate(0.000000, 896.000000)">
-                <g id="Description">
-                    <polygon id="Triangle" transform="translate(299.000000, 40.000000) rotate(-180.000000) translate(-299.000000, -40.000000) " points="299 45 294 35 304 35"></polygon>
-                </g>
-            </g>
-        </g>
-    </g>
 </svg>

@@ -37,6 +37,9 @@ body {
 
 
 .product-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background: #ccc;
   font-size: 0;
   overflow-y: scroll;
@@ -55,7 +58,7 @@ body {
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+    justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
