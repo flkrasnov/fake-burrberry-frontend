@@ -1,0 +1,316 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  font-family: Lora, serif;
+  color: #111;
+}
+.wrapper {
+  padding: 0 1rem;
+}
+/* header styles */
+.header {
+  background: #fff;
+  padding: 1rem 0;
+}
+.header-logo {
+  display: block;
+  margin: 0 auto;
+}
+/* header styles end */
+
+/* page heading */
+.product-heading {
+  padding: 1.5rem 1rem;
+}
+.h1heading {
+  font-size: .875rem;
+  color: #111;
+  font-weight: normal;
+  margin: 0;
+  line-height: 1.3;
+}
+/* page heading end */
+
+
+
+.product-slider {
+  background: #ccc;
+  font-size: 0;
+  overflow-y: scroll;
+}
+.product-slider img {
+  display: inline-block;
+}
+
+
+
+
+/* product-info */
+.product-info_price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5rem 0 1rem;
+  line-height: 1.3;
+}
+.product-info_price .h2heading {
+  margin: 0;
+  font-size: 1.125rem;
+  font-family: Raleway, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  display: block;
+}
+.small-txt {
+  display: block;
+  font-size: .75rem;
+  line-height: 1;
+  font-family: Raleway, Helvetica, Arial, sans-serif;
+  margin: 0;
+  color: #171717;
+}
+.product-info_color {
+  padding: 1rem 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.color-btn  {
+  display: block;
+  padding: 20px;
+  border-radius: 50%;
+  border: 0;
+  margin-right: 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+}
+.color-btn.active  {
+  padding: 19px;
+  border: 1px solid #111;
+}
+.color-btn.black  {
+  background: #232122;
+}
+.color-btn.honey  {
+  background: #cfa880;
+}
+/* product-info end */
+.border-bottom {
+  border-bottom: 1px solid #c6c6c6;
+}
+
+/* product buttons */
+.product-info_buttons {
+  padding: 2rem 0 3rem;
+}
+.square-btn {
+  width: 100%;
+  display: block;
+  padding: 15px 0;
+  margin-bottom: 1rem;
+  border: 1px solid #171717;
+  border-radius: 2px;
+  font-family: Raleway, Helvetica, Arial, sans-serif;
+  font-size: .75rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.square-btn.black {
+  color: #fff;
+  background: #171717;
+}
+.square-btn.white {
+  background: #fff;
+  color: #171717;
+}
+.text-btn {
+  display: block;
+  margin-top: 1.5rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #171717;
+  font-size: .75rem;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Raleway, Helvetica, Arial, sans-serif;
+  cursor: pointer;
+}
+/* product buttons end */
+
+/* product page accordion */
+.product-accordion_head {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.product-accordion_head.open .product-accordion_chevron {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.product-accordion_head.open + .product-accordion_content {
+  display: block;
+}
+.product-accordion_name {
+  margin: 0;
+  padding: 1.875rem 0;
+  font-size: .875rem;
+  font-family: Raleway, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+.product-accordion_chevron {
+  display: block;
+  width: 10px;
+  height: 10px;
+}
+.product-accordion_content {
+  display: none;
+  margin: 0;
+  padding-top: 2px;
+  padding-bottom: 2rem;
+  font-size: .875rem;
+}
+.product-accordion_content p {
+  line-height: 1.5rem;
+  margin: 0;
+}
+.product-accordion_content p:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+/* product page accordion end */
+.grid-block {
+  padding-top: 2.875rem;
+  padding-bottom: 1rem;
+}
+.block-heading {
+  display: inline-block;
+}
+.block-heading hr {
+  display: block;
+  height: 1px;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid #171717;
+}
+.block-heading .heading {
+  margin-bottom: .5rem;
+  margin-top: 0;
+  color: #171717;
+  font-family: Raleway, Helvetica, Arial, sans-serif;
+  font-size: .875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.item-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+.item-grid .item {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+.item-grid .item:nth-child(2n) {
+  padding-left: 0.875rem;
+}
+.item-grid .item:nth-child(2n+1) {
+  padding-right: 0.875rem;
+}
+.item-grid .item img {
+  display: block;
+  width: 100%;
+}
+.item-grid .item-name {
+  margin: .75rem 0 .5rem;
+  font-family: Lora, serif;
+  font-size: 1rem;
+  color: #111;
+  line-height: 1.5rem;
+  font-weight: normal;
+}
+.item-grid .item-price {
+  margin: 0;
+  margin-bottom: 2rem;
+  font-family: Lora, serif;
+  color: #999;
+  font-size: .75rem;
+  font-weight: normal;
+  font-family: Raleway, Helvetica, Arial, sans-serif;
+}
+
+.links-wrapper {
+  margin-bottom: 4rem;
+}
+.links-wrapper .block-heading hr {
+  margin-bottom: 1.5rem;
+}
+.links-wrapper .block-heading .heading {
+  font-family: Lora, serif;
+}
+.links-wrapper a {
+  display: block;
+  margin-bottom: 1rem;
+  color: #171717;
+  font-size: .875rem;
+  text-decoration: none;
+  font-style: italic;
+}
+
+
+
+
+.page-footer {
+  padding-top: 2rem;
+  background: #f3f3f3;
+}
+.page-footer p {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+.page-footer .gray-txt {
+  margin-bottom: 1rem;
+  font-family: Raleway, Helvetica, Arial, sans-serif;
+  font-size: .75rem;
+  color: #999999;
+}
+.page-footer .footer-help {
+  margin-top: 1.5rem;
+  color: #171717;
+  font-family: Raleway, Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-size: .875rem;
+  font-weight: bold;
+}
+.page-footer .footer-btn {
+  padding-bottom: 2rem;
+  margin-bottom: 0;
+  color: #171717;
+  text-align: center;
+  font-size: .875rem;
+  font-style: italic;
+}
