@@ -42,8 +42,25 @@ body {
   height: 400px;
 }
 /* product slider end */
-
-
+/* product-info */
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+.product-info-price-text {
+  margin: 1rem 0;
+  font-size: 1rem;
+  line-height: 19px;
+  font-weight: 400;
+}
+.product-info-code-text {
+  margin: 1rem 0;
+  font-size: .75rem;
+  line-height: .875rem;
+}
+/* product-info end */
 
 
 
@@ -81,7 +98,6 @@ body {
 }
 .product-info_price .h2heading {
   margin: 0;
-
   font-size: 1rem;
   font-family: Raleway, Helvetica, Arial, sans-serif;
   font-weight: normal;
