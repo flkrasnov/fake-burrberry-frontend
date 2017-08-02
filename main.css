@@ -109,8 +109,7 @@ body {
   width: 100%;
   height: 46px;
   padding: 1rem 0;
-  box-shadow: inset 0 0 0 1px #171717;
-  border: 0;
+  border: 1px solid #171717;
   border-radius: 2px;
   font-family: Raleway, Helvetica Neue, Helvetica, sans-serif;
   text-transform: uppercase;
@@ -145,72 +144,85 @@ body {
 }
 /* product-buttons end */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* product buttons */
-.product-info_buttons {
-  padding: 2rem 0 3rem;
+/* product accordion */
+.accordion-row {
+  padding: 0 1rem;
+  border-bottom: 1px solid #c6c6c6;
 }
-.square-btn {
+.accordion-row-head-btn {
+  display: block;
   width: 100%;
-
-  display: block;
-  padding: 1rem 0;
-  margin-bottom: 1rem;
-
-  border: 0;
-  border-radius: 2px;
-
-  font-family: Raleway, Helvetica, Arial, sans-serif;
-  font-size: .75rem;
-  line-height: 1;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-.square-btn.black {
-  line-height: 1.2;
-
-  background: #171717;
-  color: #fff;
-}
-.square-btn.white {
-  border: 1px solid #171717;
-
-  background: #fff;
-  color: #171717;
-}
-.text-btn {
-  display: block;
   padding: 0;
-  margin-top: 1.5rem;
-
   border: 0;
-
-  font-family: Raleway, Helvetica, Arial, sans-serif;
-  font-size: .75rem;
-  line-height: 1.1;
-  text-decoration: none;
+  font-family: Raleway, Helvetica Neue, Helvetica, sans-serif;
   text-transform: uppercase;
-  background: none;
-  color: #171717;
-  cursor: pointer;
+  text-align: left;
+  background: 0;
 }
-/* product buttons end */
+.accordion-row-head-text {
+  position: relative;
+  margin: 2rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 19px;
+}
+.accordion-row-head-text::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 19px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: url(img/triangle.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.accordion-row-body {
+  display: none;
+  padding-bottom: 2rem;
+}
+.accordion-row-body-text {
+  margin: 0;
+  font-family: Lora, serif;
+  font-size: .875rem;
+  line-height: 1.5rem;
+}
+.accordion-text-break {
+  line-height: 1.5rem;
+}
+.accordion-row-body-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.accordion-row-open .accordion-row-body {
+  display: block;
+}
+.accordion-row-open .accordion-row-head-text::after {
+  transform: rotate(180deg);
+}
+/* product accordion end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* product page accordion */
 .product-accordion_head {
