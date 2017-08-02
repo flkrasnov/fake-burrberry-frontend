@@ -61,9 +61,41 @@ body {
   line-height: .875rem;
 }
 /* product-info end */
-
-
-
+/* product-color */
+.product-color {
+  padding: 0 1rem;
+}
+.product-color-text {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: .75rem;
+  line-height: .875rem;
+}
+.product-color-toggler {
+  display: flex;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #c6c6c6;
+}
+.product-color-toggler-btn {
+  box-sizing: border-box;
+  display: block;
+  padding: 20px;
+  margin-right: 1rem;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.product-color-toggler-btn-active {
+  padding: 19px;
+  border: 1px solid #232122;
+}
+.color-togl-black  {
+  background: #232122;
+}
+.color-togl-honey  {
+  background: #cfa880;
+}
+/* product-color end */
 
 
 
