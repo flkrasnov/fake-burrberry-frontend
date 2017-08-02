@@ -74,6 +74,7 @@ body {
 .product-color-toggler {
   display: flex;
   padding-bottom: 2rem;
+  margin-bottom: 2rem;
   border-bottom: 1px solid #c6c6c6;
 }
 .product-color-toggler-btn {
@@ -96,85 +97,70 @@ body {
   background: #cfa880;
 }
 /* product-color end */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* product-info */
-.product-info_price {
-  display: -webkit-box;
-  display: -ms-flexbox;
+/* product-buttons */
+.product-buttons {
   display: flex;
-  -webkit-box-pack: justify;
-     -ms-flex-pack: justify;
-   justify-content: space-between;
-  -webkit-box-align: center;
-     -ms-flex-align: center;
-        align-items: center;
-  padding: 1rem 0;
-}
-.product-info_price .h2heading {
-  margin: 0;
-  font-size: 1rem;
-  font-family: Raleway, Helvetica, Arial, sans-serif;
-  font-weight: normal;
-}
-.small-txt {
-  display: block;
-  margin: 0;
-
-  font-size: .75rem;
-  line-height: 1.2;
-  font-family: Raleway, Helvetica, Arial, sans-serif;
-  color: #171717;
-}
-.product-info_color {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 1rem 0 2rem;
-}
-.color-btn  {
-  display: block;
-  padding: 20px;
-  margin-right: 1rem;
-
-  border: 0;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.color-btn.active  {
-  padding: 19px;
-
-  border: 1px solid #111;
-}
-.color-btn.black  {
-  background: #232122;
-}
-.color-btn.honey  {
-  background: #cfa880;
-}
-/* product-info end */
-
-
-.border-bottom {
+  flex-direction: column;
+  padding: 0 1rem;
   border-bottom: 1px solid #c6c6c6;
 }
+.product-buttons-btn {
+  display: block;
+  width: 100%;
+  height: 46px;
+  padding: 1rem 0;
+  box-shadow: inset 0 0 0 1px #171717;
+  border: 0;
+  border-radius: 2px;
+  font-family: Raleway, Helvetica Neue, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+}
+.product-buttons-btn-black {
+  margin-bottom: 1rem;
+  color: #fff;
+  background-color: #171717;
+}
+.product-buttons-btn-white {
+  margin-bottom: 1.5rem;
+  color: #171717;
+  background-color: #fff;
+}
+.product-buttons-btn-text {
+  display: block;
+  padding: 0;
+  margin-bottom: 3rem;
+  border: 0;
+  font-family: Raleway, Helvetica Neue, Helvetica, sans-serif;
+  font-size: .75rem;
+  line-height: 14px;
+  text-align: left;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: none;
+  color: #171717;
+  cursor: pointer;
+}
+/* product-buttons end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* product buttons */
 .product-info_buttons {
