@@ -1,39 +1,54 @@
-*, *:before, *:after {
-  -webkit-box-sizing: border-box; 
-  box-sizing: border-box;
-}
 body {
   font-size: 16px;
-  font-family: Lora, serif;
+  font-family: Raleway, Helvetica Neue, Helvetica, sans-serif;
   color: #111;
 }
-.wrapper {
-  padding: 0 1rem;
-}
+
 /* header styles */
-.header {
-  padding: 1rem 0;
+.page-header {
   background: #fff;
+  border-bottom: 1px solid #c6c6c6;
 }
-.header-logo {
+.page-header-logo {
   display: block;
-  margin: 0 auto;
+  width: 138px;
+  height: 10px;
+  margin: 1rem auto;
 }
 /* header styles end */
 
 /* page heading */
-.product-heading {
-  padding: 1rem;
+.product-header {
+  padding: 0 1rem;
+  border-bottom: 1px solid #c6c6c6;
 }
-.h1heading {
-  margin: 0;
-
+.product-header-text {
+  margin: 1rem 0;
   font-size: 1.25rem;
-  font-weight: normal;
-  line-height: 1.2;
+  font-weight: 400;
   color: #111;
 }
 /* page heading end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* product slider */
