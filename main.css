@@ -49,13 +49,13 @@ body {
   align-items: center;
   padding: 0 1rem;
 }
-.product-info-price-text {
+.product-info-price {
   margin: 1rem 0;
   font-size: 1rem;
   line-height: 19px;
   font-weight: 400;
 }
-.product-info-code-text {
+.product-info-code {
   margin: 1rem 0;
   font-size: .75rem;
   line-height: .875rem;
