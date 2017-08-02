@@ -24,44 +24,46 @@ body {
 }
 .product-header-text {
   margin: 1rem 0;
+  font-family: Lora, serif;
   font-size: 1.25rem;
+  line-height: 1.5rem;
   font-weight: 400;
-  color: #111;
+  color: #171717;
 }
 /* page heading end */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* product slider */
 .product-slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  overflow-y: scroll;
+  overflow-x: scroll;
 }
-.product-slider img {
-  display: inline-block;
+.product-slider-img {
+  display: block;
+  width: 300px;
+  height: 400px;
 }
 /* product slider end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* product-info */
