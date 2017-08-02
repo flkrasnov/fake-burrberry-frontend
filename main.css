@@ -165,7 +165,7 @@ body {
   margin: 2rem 0;
   font-size: 1rem;
   font-weight: 500;
-  line-height: 19px;
+  line-height: 20px;
 }
 .accordion-row-head-text::after {
   content: "";
@@ -200,6 +200,9 @@ body {
 .accordion-row-open .accordion-row-body {
   display: block;
 }
+.accordion-row-open .accordion-row-head-text {
+  line-height: 19px;
+}
 .accordion-row-open .accordion-row-head-text::after {
   transform: rotate(180deg);
 }
@@ -211,11 +214,12 @@ body {
 }
 .recomendations-heading {
   display: inline-block;
-  margin-top: 39px;
+  padding-bottom: .5rem;
+  margin-top: 48px;
   margin-bottom: 1.5rem;
   font-size: 1rem;
   font-weight: 500;
-  line-height: 36px;
+  line-height: 19px;
   border-bottom: 1px solid #111;
   text-transform: uppercase;
 }
@@ -262,14 +266,16 @@ body {
 /* product more-links */
 .more-links {
   padding: 0 1rem;
+  margin-bottom: 4rem;
 }
 .more-links-heading {
   display: inline-block;
+  padding-bottom: .5rem;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   font-size: 1rem;
   font-weight: 500;
-  line-height: 36px;
+  line-height: 19px;
   border-bottom: 1px solid #111;
   text-transform: uppercase;
 }
@@ -281,6 +287,7 @@ body {
 .more-links-link {
   display: block;
   margin-bottom: 1rem;
+  font-family: Lora, serif;
   font-size: 14px;
   line-height: 17px;
   text-decoration: none;
@@ -289,151 +296,42 @@ body {
 }
 /* product more-links end */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* product page accordion end */
-
-.block-heading {
-  display: inline-block;
-}
-.block-heading hr {
-  height: 1px;
-  display: block;
-  padding: 0;
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-
-  border: 0;
-  border-top: 1px solid #171717;
-}
-.block-heading .heading {
-  margin-bottom: .5rem;
-  margin-top: 0;
-
-  font-family: Raleway, Helvetica, Arial, sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: #171717;
-}
-.recomendations-grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-}
-.recomendations-grid_card {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-}
-.recomendations-grid_card:nth-child(2n) {
-  padding-left: 14px;
-}
-.recomendations-grid_card:nth-child(2n+1) {
-  padding-right: 14px;
-}
-.recomendations-grid_card img {
-  display: block;
-  width: 100%;
-}
-.recomendations-grid_card_name {
-  margin: .5rem 0;
-
-  font-family: Lora, serif;
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.2rem;
-  color: #111;
-}
-.recomendations-grid_card_price {
-  margin: 0;
-  margin-bottom: 2rem;
-
-  font-family: Lora, serif;
-  font-size: .75rem;
-  line-height: 1.2;
-  font-weight: normal;
-  font-family: Raleway, Helvetica, Arial, sans-serif;
-  color: #999;
-}
-
-.links-wrapper {
-  margin-bottom: 4rem;
-}
-.links-wrapper .block-heading hr {
-  margin-bottom: 1.5rem;
-}
-.links-wrapper a {
-  display: block;
-  margin-bottom: 1rem;
-
-  font-size: 14px;
-  line-height: 1.2;
-  text-decoration: none;
-  font-style: italic;
-  color: #171717;
-}
-
-.footer {
-  padding-top: 2rem;
-  margin-bottom: 10rem;
-
+/* page footer */
+.page-footer {
+  padding: 2rem 1rem;
   background: #f3f3f3;
 }
-.footer_shipping,
-.footer_lang {
+.page-footer-shipping,
+.page-footer-lang {
+  display: block;
   margin-bottom: 1rem;
-  border: 0;
   padding: 0;
-
-  font-family: Raleway, Helvetica, Arial, sans-serif;
+  border: 0;
+  font-family: Raleway, Helvetica Neue, Helvetica, sans-serif;
   font-size: .75rem;
-  line-height: 1.1;
+  line-height: 15px;
   background: none;
   color: #999999;
 }
-.footer_lang {
+.page-footer-lang {
   margin-bottom: 1.5rem;
 }
-.footer_help {
-  margin: 0;
+.page-footer-help {
+  margin-top: 0;
   margin-bottom: 1rem;
-  
   text-align: center;
-  font-family: Raleway, Helvetica, Arial, sans-serif;
   font-size: 1rem;
   font-weight: 700;
   color: #171717;
 }
-.footer_more {
+.page-footer-more {
   display: block;
-  padding-bottom: 2rem;
   margin-bottom: 0;
-  
+  font-family: Lora, serif;
   text-align: center;
   font-size: 14px;
   font-style: italic;
   text-decoration: none;
   color: #171717;
 }
+/* page footer end */
