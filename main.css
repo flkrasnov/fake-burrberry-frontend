@@ -113,6 +113,8 @@ body {
   margin-right: 1rem;
   border: 0;
   border-radius: 50%;
+  font-size: 0px;
+  line-height: 0px;
   cursor: pointer;
 }
 
@@ -418,3 +420,22 @@ body {
 
 
 /* page footer end */
+
+
+@media screen and (min-width: 768px) {
+
+  .page-header-logo {
+    margin: 1.5rem auto;
+  }
+
+  .product-header {
+    padding: 0 .5rem;
+  }
+
+  .product-header-text {
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+
+}
