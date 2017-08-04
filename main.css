@@ -51,8 +51,7 @@ body {
 
 .product-slider-img {
   display: block;
-  width: 300px;
-  height: 400px;
+  width: 100%;
 }
 
 
@@ -233,18 +232,19 @@ body {
   padding-bottom: 2rem;
 }
 
-.accordion-row-body-text {
+.accordion-row-body p,
+.accordion-row-body ul li {
   margin: 0;
   font-family: Lora, serif;
   font-size: 14px;
   line-height: 1.5rem;
 }
 
-.accordion-text-break {
+.accordion-row-body br {
   line-height: 1.5rem;
 }
 
-.accordion-row-body-list {
+.accordion-row-body ul {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -309,8 +309,7 @@ body {
 
 .recomendations-blocks-block-img {
   display: block;
-  width: 130px;
-  height: 174px;
+  width: 100%;
 }
 
 .recomendations-blocks-block-name {
