@@ -238,7 +238,7 @@ body {
 .accordion-row-body ul li {
   margin: 0;
   font-family: Lora, serif;
-  font-size: .75rem;
+  font-size: .875rem;
   line-height: 1.5rem;
 }
 
@@ -302,16 +302,17 @@ body {
 }
 
 .recomendations-blocks-block:nth-child(2n) {
-  padding-left: .75rem;
+  padding-left: .875rem;
 }
 
 .recomendations-blocks-block:nth-child(2n+1) {
-  padding-right: .75rem;
+  padding-right: .875rem;
 }
 
 .recomendations-blocks-block-img {
   display: block;
   width: 100%;
+  /* leave img height for zepplin norm compare */
   height: 174px;
 }
 
