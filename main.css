@@ -4,6 +4,9 @@ body {
   color: #111;
 }
 
+.visible-xs {
+  display: block;
+}
 
 /* header styles */
 
@@ -24,7 +27,7 @@ body {
 /* page heading */
 
 .product-header {
-  padding: 0 1rem;
+  padding: 0 .5rem;
 }
 
 .product-header-text {
@@ -45,6 +48,7 @@ body {
 .product-slider {
   display: flex;
   overflow-x: scroll;
+  margin: 0 -.5rem;
 }
 
 .product-slider-img {
@@ -62,7 +66,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
+  padding: 0 .5rem;
 }
 
 .product-info-price {
@@ -85,7 +89,7 @@ body {
 /* product-color */
 
 .product-color {
-  padding: 0 1rem;
+  padding: 0 .5rem;
 }
 
 .product-color-text {
@@ -136,7 +140,7 @@ body {
 .product-buttons {
   display: flex;
   flex-direction: column;
-  padding: 0 1rem;
+  padding: 0 .5rem;
   border-bottom: 1px solid #c6c6c6;
 }
 
@@ -192,7 +196,7 @@ body {
 /* product accordion */
 
 .accordion-row {
-  padding: 0 1rem;
+  padding: 0 .5rem;
   border-bottom: 1px solid #c6c6c6;
 }
 
@@ -256,10 +260,6 @@ body {
   display: block;
 }
 
-/* .accordion-row-open .accordion-row-head-text {
-  line-height: 1.1875rem;
-} */
-
 .accordion-row-open .accordion-row-head-text::after {
   transform: rotate(180deg);
 }
@@ -271,7 +271,7 @@ body {
 /* product recomendations */
 
 .recomendations {
-  padding: 0 1rem;
+  padding: 0 .5rem;
 }
 
 .recomendations-heading {
@@ -301,19 +301,10 @@ body {
   text-decoration: none;
 }
 
-.recomendations-blocks-block:nth-child(2n) {
-  padding-left: .875rem;
-}
-
-.recomendations-blocks-block:nth-child(2n+1) {
-  padding-right: .875rem;
-}
 
 .recomendations-blocks-block-img {
   display: block;
   width: 100%;
-  /* leave img height for zepplin norm compare */
-  height: 174px;
 }
 
 .recomendations-blocks-block-name {
@@ -339,7 +330,7 @@ body {
 /* product more-links */
 
 .more-links {
-  padding: 0 1rem;
+  padding: 0 .5rem;
   margin-bottom: 4rem;
 }
 
@@ -379,8 +370,12 @@ body {
 /* page footer */
 
 .page-footer {
-  padding: 2rem 1rem;
+  padding: 2rem .5rem;
   background: #f3f3f3;
+}
+
+.page-footer-nav {
+  display: none;
 }
 
 .page-footer-shipping, .page-footer-lang {
@@ -423,3 +418,151 @@ body {
 
 
 /* page footer end */
+
+
+@media screen and (min-width: 48rem) {
+
+  .visible-xs {
+    display: none;
+  }
+
+  .page-header-logo {
+    margin: 1.5rem auto;
+  }
+
+  .product-header {
+    padding: 0 .5rem;
+  }
+
+  .product-header-text {
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
+    line-height: 1.8125rem;
+  }
+
+  .product-info h2,
+  .product-info p {
+    margin-top: 0;
+  }
+
+  .product-slider {
+    margin: 0;
+  }
+
+  .product-slider-img {
+    width: 432px;
+    height: 576px;
+  }
+
+  .recomendations,
+  .product-header,
+  .product-info,
+  .product-color,
+  .product-buttons,
+  .accordion-row {
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: 0;
+  }
+
+  .more-links,
+  .page-footer-help,
+  .page-footer-more {
+    display: none;
+  }
+
+  .accordion-row-head {
+    padding: 0;
+  }
+
+  .accordion-row-head-text {
+    margin: 1.5rem 0 1rem;
+  }
+
+  .accordion-row-head-text::after {
+    display: none;
+  }
+
+  .accordion-row-body {
+    display: block;
+    padding-bottom: 1.5rem;
+  }
+
+  .accordion-row-body-img img {
+    display: block;
+    width: 100%;
+  }
+
+  .accordion-row-body-delivery h2 {
+    margin: 0;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.313rem;
+  }
+
+  .accordion-row-body-delivery h6 {
+    margin: 0;
+    margin-bottom: .25rem;
+    font-size: .75rem;
+    font-weight: 700;
+  }
+
+  .accordion-row-body-delivery p {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    font-size: .75rem;
+    line-height: 1rem;
+  }
+
+  .recomendations-heading {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 20px;
+  }
+
+  .recomendations-blocks-block {
+    margin-bottom: 4rem;
+  }
+
+  .recomendations-blocks-block-name {
+    line-height: 1.2;
+  }
+
+  .page-footer {
+    padding: 2rem 0;
+  }
+
+  .page-footer-nav {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .page-footer-nav-list h4 {
+    margin: 0;
+    margin-bottom: 1rem;
+    font-size: .75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .page-footer-nav-list a {
+    display: block;
+    margin-bottom: .75rem;
+    font-size: .75rem;
+    font-weight: 600;
+    line-height: 1rem;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #999;
+  }
+
+  .page-footer-shipping,
+  .page-footer-lang {
+    display: inline-block;
+    margin-right: 1.2rem;
+    margin-bottom: 0;
+    line-height: 1.5rem;
+  }
+
+}
