@@ -148,7 +148,7 @@ body {
 .product-buttons-btn {
   /* if height not set manually, button 
   never gets 48px height (47.6 || 48.4) */
-  height: 48px;
+  height: 	3rem;
 
   display: block;
   padding: 1rem 0;
@@ -223,8 +223,8 @@ body {
 .accordion-row-head-text::after {
   content: "";
   display: block;
-  width: 10px;
-  height: 19px;
+  width: 0.625rem;
+  height: 1.1875rem;
   position: absolute;
   right: 0;
   top: 0;
@@ -358,7 +358,7 @@ body {
   margin-bottom: 1rem;
   font-family: Lora, serif;
   font-size: .875rem;
-  line-height: 17px;
+  line-height: 1.0625rem;
   text-decoration: none;
   font-style: italic;
   color: #171717;
@@ -497,7 +497,7 @@ body {
   .accordion-row-body-delivery h2 {
     /* add height for pixel-perfect match
     line-height makes it 18.6px */
-    height: 19px;
+    height: 1.1875rem;
 
     margin: 0;
     margin-bottom: 1rem;
@@ -506,7 +506,7 @@ body {
     line-height: 1.1875rem;
   }
 
-  .accordion-row-body-delivery h6 {
+  .accordion-row-body-delivery h4 {
     margin: 0;
     margin-bottom: .25rem;
     font-size: .75rem;
