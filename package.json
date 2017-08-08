@@ -12,5 +12,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "flexboxgrid2": "^7.0.0-alpha6",
+    "normalize.css": "^7.0.0"
   }
 }
