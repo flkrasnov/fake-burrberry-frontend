@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default () => {
   return (
     <footer className="page-footer">
-
       <div className="page-footer-nav">
         <div className="container">
           <div className="row">
-
             <div className="col-md-3">
               <nav className="page-footer-nav-list">
                 <h4>Customer service</h4>
@@ -43,19 +41,23 @@ export default () => {
                 <a href="">Japan Only - SCTL indications</a>
               </nav>
             </div>
-
           </div>
         </div>
       </div>
 
       <div className="container">
-        <button className="page-footer-shipping" type="button">Shipping country: Russian Federation</button>
-        <button className="page-footer-lang" type="button">Language: English</button>
+        <button className="page-footer-shipping" type="button">
+          Shipping country: Russian Federation
+        </button>
+        <button className="page-footer-lang" type="button">
+          Language: English
+        </button>
 
         <h4 className="page-footer-help">Need help?</h4>
-        <a className="page-footer-more" href="">Find out more and contact us</a>
+        <a className="page-footer-more" href="">
+          Find out more and contact us
+        </a>
       </div>
-      
     </footer>
   );
 };
