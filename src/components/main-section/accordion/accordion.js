@@ -1,5 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 import triangle from '../../../triangle.svg';
+import AccordionHeading from './accordion-heading';
+
+
+const accordionHeadings = [
+  'Description',
+  'Shipping & returns'
+];
+
 
 export default () => {
   return (
@@ -8,11 +16,7 @@ export default () => {
       <div className="accordion-row accordion-row-open">
 
         <div className="accordion-row-head">
-          <div className="container">
-            <button className="accordion-row-head-btn" type="button">
-              <h2 className="accordion-row-head-text">Description</h2>
-            </button>
-          </div>
+          <AccordionHeading heading={accordionHeadings} />
         </div>
 
         <div className="accordion-row-body">
@@ -40,11 +44,7 @@ export default () => {
       <div className="accordion-row">
 
         <div className="accordion-row-head visible-xs">
-          <div className="container">
-            <button className="accordion-row-head-btn" type="button">
-              <h2 className="accordion-row-head-text">Shipping & returns</h2>
-            </button>
-          </div>
+          <AccordionHeading heading={accordionHeadings} />
         </div>
 
         <div className="accordion-row-body">
