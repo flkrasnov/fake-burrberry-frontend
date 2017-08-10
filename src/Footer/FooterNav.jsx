@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const ListHeading = styled.nav`
+const NavHeading = styled.nav`
   @media screen and (min-width: 48rem) {
     margin: 0;
     margin-bottom: 1rem;
@@ -31,7 +31,7 @@ export default () => {
       <div className="row">
         <div className="col-md-3">
           <nav>
-            <ListHeading>Customer service</ListHeading>
+            <NavHeading>Customer service</NavHeading>
             <Ancor href="/">Contact Us</Ancor>
             <Ancor href="/">Payment</Ancor>
             <Ancor href="/">Shipping</Ancor>
@@ -45,7 +45,7 @@ export default () => {
 
         <div className="col-md-3">
           <nav>
-            <ListHeading>Our Company</ListHeading>
+            <NavHeading>Our Company</NavHeading>
             <Ancor href="/">Our History</Ancor>
             <Ancor href="/">Burberry Group Plc</Ancor>
             <Ancor href="/">Careers</Ancor>
@@ -56,7 +56,7 @@ export default () => {
 
         <div className="col-md-3">
           <nav>
-            <ListHeading>Legal & Cookies</ListHeading>
+            <NavHeading>Legal & Cookies</NavHeading>
             <Ancor href="/">Terms & Conditions</Ancor>
             <Ancor href="/">Privacy Policy</Ancor>
             <Ancor href="/">Cookie Policy</Ancor>
