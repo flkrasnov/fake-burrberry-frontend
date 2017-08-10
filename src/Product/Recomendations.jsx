@@ -74,6 +74,20 @@ const BlockPrice = styled.h5`
   color: #999;
 `;
 
+function RecommendationBlock(props) {
+  return (
+    <AncorBlock href={props.link}>
+      <BlockImg src={props.img} alt={props.alt} />
+      <BlockName>
+        {props.name}
+      </BlockName>
+      <BlockPrice>
+        {props.price}
+      </BlockPrice>
+    </AncorBlock>
+  );
+}
+
 export default () => {
   return (
     <Recommendations>
@@ -85,35 +99,19 @@ export default () => {
         <div className="container">
           <div className="row">
             <div className="col-xs-6 col-sm-3">
-              <AncorBlock href="">
-                <BlockImg src="img/wr1.jpg" alt="Emroided Hooded" />
-                <BlockName>Emroided Hooded Content For Three Lines</BlockName>
-                <BlockPrice>27 000 руб</BlockPrice>
-              </AncorBlock>
+              <RecommendationBlock link="/" img="img/wr1.jpg" alt="Emroided Hooded" name="Emroided Hooded Content For Three Lines" price="27 000 руб" />
             </div>
 
             <div className="col-xs-6 col-sm-3">
-              <AncorBlock href="">
-                <BlockImg src="img/wr2.jpg" alt="Relaxed Fit Stretch Jeans" />
-                <BlockName>Relaxed Fit Stretch Jeans Content For Three Lines</BlockName>
-                <BlockPrice>22 500 руб</BlockPrice>
-              </AncorBlock>
+              <RecommendationBlock link="/" img="img/wr2.jpg" alt="Relaxed Fit Stretch Jeans" name="Relaxed Fit Stretch Jeans Content For Three Lines" price="22 500 руб" />
             </div>
 
             <div className="col-xs-6 col-sm-3">
-              <AncorBlock href="">
-                <BlockImg src="img/wr3.jpg" alt="Leather and House" />
-                <BlockName>Leather and House Check Content For Three Lines</BlockName>
-                <BlockPrice>120 000 руб</BlockPrice>
-              </AncorBlock>
+              <RecommendationBlock link="/" img="img/wr3.jpg" alt="Leather and House" name="Leather and House Check Content For Three Lines" price="120 000 руб" />
             </div>
 
             <div className="col-xs-6 col-sm-3">
-              <AncorBlock href="">
-                <BlockImg src="img/wr4.jpg" alt="Leather Wingtip" />
-                <BlockName>Leather Wingtip Check Content For Three Lines</BlockName>
-                <BlockPrice>46 000 руб</BlockPrice>
-              </AncorBlock>
+              <RecommendationBlock link="/" img="img/wr4.jpg" alt="Leather Wingtip" name="Leather Wingtip Check Content For Three Lines" price="46 000 руб" />
             </div>
           </div>
         </div>

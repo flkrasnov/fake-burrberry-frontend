@@ -18,4 +18,4 @@ Our work is in progress now, we're on the second chapter of the course.
 Next on the go:
 
 - defining functional components, how props really work?
-- Desctop mock added
+- Desktop mock added

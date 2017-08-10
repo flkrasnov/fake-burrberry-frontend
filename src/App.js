@@ -1,16 +1,19 @@
 import React, { Component } from "react";
 import Helmet from "react-helmet";
-import Header from "./components/header";
-import Main from "./components/main-section/main-section";
-import Footer from "./components/footer/footer";
+import Header from "./Header";
+import Product from "./Product";
+import Footer from "./Footer";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Helmet title="Long Cotton Gabardine Car Coat | Men - Burberry" />
+        <Helmet>
+          <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
+          <meta name="description" content="Welcome to burberry.com" />
+        </Helmet>
         <Header />
-        <Main />
+        <Product />
         <Footer />
       </div>
     );

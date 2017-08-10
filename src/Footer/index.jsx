@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import FooterNav from "./footer-nav";
+import FooterNav from "./FooterNav";
 
 const Footer = styled.footer`
   padding: 2rem .5rem;

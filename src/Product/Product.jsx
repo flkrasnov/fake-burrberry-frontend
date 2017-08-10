@@ -1,13 +1,13 @@
 import React from "react";
-import ProductHeader from "./product-header.js";
-import ProductSlider from "./product-slider.js";
-import ProductInfo from "./product-info.js";
-import ProductColor from "./product-color.js";
-import ProductBtns from "./product-buttons.js";
+import ProductHeader from "./ProductHeader";
+import ProductSlider from "./ProductSlider";
+import ProductInfo from "./ProductInfo";
+import ProductColor from "./ProductColor";
+import ProductBtns from "./ProductButtons";
 
 export default () => {
   return (
-    <section className="product">
+    <section>
       <div className="container">
         <div className="row">
           <div className="col-xs-12">

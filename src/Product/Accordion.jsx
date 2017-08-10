@@ -1,6 +1,6 @@
 import React from "react";
-import AccordionHeading from "./accordion-heading";
 import styled from "styled-components";
+import AccordionHeading from "./AccordionHeading";
 
 const Body = styled.div`
   display: none;
