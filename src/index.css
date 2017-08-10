@@ -8,8 +8,94 @@ body {
   display: block;
 }
 
+/* left 4 props */
+
+/* product-color */
+
+.product-color-toggler-btn {
+  box-sizing: border-box;
+  display: block;
+  padding: 1.25rem;
+  margin-right: 1rem;
+  border: 0;
+  border-radius: 50%;
+  font-size: 0;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.product-color-toggler-btn-active {
+  padding: 1.1875rem;
+  border: 1px solid #232122;
+}
+
+.color-toggle-black {
+  background: #232122;
+}
+
+.color-toggle-honey {
+  background: #cfa880;
+}
+
+/* product-color end */
+
+.product-buttons-btn {
+  /* if height not set manually, button 
+  never gets 48px height (47.6 || 48.4) */
+  height: 3rem;
+  display: block;
+  padding: 1rem 0;
+  border: 1px solid #171717;
+  border-radius: 2px;
+  font-family: Raleway, Helvetica Neue, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: .75rem;
+  font-weight: 400;
+  line-height: 1rem;
+}
+
+.product-buttons-btn-black {
+  margin-bottom: 1rem;
+  color: #fff;
+  background-color: #171717;
+}
+
+.product-buttons-btn-white {
+  margin-bottom: 1.5rem;
+  color: #171717;
+  background-color: #fff;
+}
+
+/* product-buttons end */
+
+/* product accordion */
+
+.accordion-row {
+  padding: 0 .5rem;
+  border-bottom: 1px solid #c6c6c6;
+}
+
+.accordion-row-open .accordion-row-body {
+  display: block;
+}
+
+.accordion-row-open .accordion-row-head-text::after {
+  transform: rotate(180deg);
+}
+
+/* product accordion end */
+
 @media screen and (min-width: 48rem) {
   .visible-xs {
     display: none;
+  }
+  /* left 4 props */
+  .accordion-row {
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: 0;
+  }
+  .accordion-row-head {
+    padding: 0;
   }
 }

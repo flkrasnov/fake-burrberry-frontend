@@ -3,7 +3,6 @@ import Helmet from "react-helmet";
 import Header from "./components/header";
 import Main from "./components/main-section/main-section";
 import Footer from "./components/footer/footer";
-import "./App.css";
 
 class App extends Component {
   render() {
