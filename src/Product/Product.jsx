@@ -1,9 +1,9 @@
 import React from "react";
-import ProductHeader from "./ProductHeader";
-import ProductSlider from "./ProductSlider";
-import ProductInfo from "./ProductInfo";
-import ProductColor from "./ProductColor";
-import ProductBtns from "./ProductButtons";
+import Header from "./ProductHeader";
+import Slider from "./ProductSlider";
+import Info from "./ProductInfo";
+import Color from "./ProductColor";
+import Btns from "./ProductButtons";
 
 export default () => {
   return (
@@ -11,17 +11,17 @@ export default () => {
       <div className="container">
         <div className="row">
           <div className="col-xs-12">
-            <ProductHeader />
+            <Header />
           </div>
 
           <div className="col-xs-12 col-sm-7">
-            <ProductSlider />
+            <Slider />
           </div>
 
           <div className="col-xs-12 col-sm-5">
-            <ProductInfo />
-            <ProductColor />
-            <ProductBtns />
+            <Info />
+            <Color />
+            <Btns />
           </div>
         </div>
       </div>

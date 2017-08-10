@@ -15,7 +15,7 @@ Our work is in progress now, we're on the second chapter of the course.
 - Adding styled-components to existing components
 - Dividing components to fucnctions
 - Defining functional components, how props really work?
-- *WE ARE HERE => Desktop layout mock add
+- *WE ARE HERE => Desktop layout mock added*
 
 _Next on the go:_
 

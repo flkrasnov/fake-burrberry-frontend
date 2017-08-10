@@ -48,20 +48,16 @@ const TextBtn = styled.button`
   cursor: pointer;
 `;
 
-function Button(props) {
-  return (
-    <SimpleButton color={props.color} value={props.value} type="button">
-      {props.value}
-    </SimpleButton>
-  );
-}
-
 export default () => {
   return (
     <Buttons>
-      <Button color="black" value="select a size" />
+      <SimpleButton color="black" type="button">
+        select size
+      </SimpleButton>
 
-      <Button color="white" value="find in store" />
+      <SimpleButton color="white" type="button">
+        find in store
+      </SimpleButton>
 
       <TextBtn type="button">NEED SIZE HELP?</TextBtn>
     </Buttons>

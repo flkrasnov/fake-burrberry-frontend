@@ -48,13 +48,13 @@ const AncorBlock = styled.a`
   text-decoration: none;
 `;
 
-const BlockImg = styled.img`
+const Img = styled.img`
   display: block;
   width: 100%;
   height: 100%;
 `;
 
-const BlockName = styled.h3`
+const Name = styled.h3`
   margin: .5rem 0;
   font-family: Lora, serif;
   font-size: 1rem;
@@ -66,7 +66,7 @@ const BlockName = styled.h3`
   }
 `;
 
-const BlockPrice = styled.h5`
+const Price = styled.h5`
   margin: 0;
   font-size: .75rem;
   line-height: .875rem;
@@ -77,13 +77,13 @@ const BlockPrice = styled.h5`
 function RecommendationBlock(props) {
   return (
     <AncorBlock href={props.link}>
-      <BlockImg src={props.img} alt={props.alt} />
-      <BlockName>
+      <Img src={props.img} alt={props.alt} />
+      <Name>
         {props.name}
-      </BlockName>
-      <BlockPrice>
-        {props.price}
-      </BlockPrice>
+      </Name>
+      <Price>
+        {props.price} руб.
+      </Price>
     </AncorBlock>
   );
 }
@@ -99,19 +99,19 @@ export default () => {
         <div className="container">
           <div className="row">
             <div className="col-xs-6 col-sm-3">
-              <RecommendationBlock link="/" img="img/wr1.jpg" alt="Emroided Hooded" name="Emroided Hooded Content For Three Lines" price="27 000 руб" />
+              <RecommendationBlock link="/" img="img/wr1.jpg" alt="Emroided Hooded" name="Emroided Hooded Content For Three Lines" price={27000} />
             </div>
 
             <div className="col-xs-6 col-sm-3">
-              <RecommendationBlock link="/" img="img/wr2.jpg" alt="Relaxed Fit Stretch Jeans" name="Relaxed Fit Stretch Jeans Content For Three Lines" price="22 500 руб" />
+              <RecommendationBlock link="/" img="img/wr2.jpg" alt="Relaxed Fit Stretch Jeans" name="Relaxed Fit Stretch Jeans Content For Three Lines" price={22500} />
             </div>
 
             <div className="col-xs-6 col-sm-3">
-              <RecommendationBlock link="/" img="img/wr3.jpg" alt="Leather and House" name="Leather and House Check Content For Three Lines" price="120 000 руб" />
+              <RecommendationBlock link="/" img="img/wr3.jpg" alt="Leather and House" name="Leather and House Check Content For Three Lines" price={120000} />
             </div>
 
             <div className="col-xs-6 col-sm-3">
-              <RecommendationBlock link="/" img="img/wr4.jpg" alt="Leather Wingtip" name="Leather Wingtip Check Content For Three Lines" price="46 000 руб" />
+              <RecommendationBlock link="/" img="img/wr4.jpg" alt="Leather Wingtip" name="Leather Wingtip Check Content For Three Lines" price={46000} />
             </div>
           </div>
         </div>

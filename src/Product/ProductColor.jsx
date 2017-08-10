@@ -41,7 +41,7 @@ const ToggleButton = styled.button`
 function ColorButton(props) {
   return (
     <ToggleButton active={props.active} color={props.color} name={props.name} type="button">
-      {props.name} color is chosen
+      choose {props.name} color
     </ToggleButton>
   );
 }
