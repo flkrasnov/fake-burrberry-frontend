@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import ProductHeader from "./product-header.js";
 import ProductSlider from "./product-slider.js";
 import ProductInfo from "./product-info.js";

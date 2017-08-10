@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import AccordionHeading from "./accordion-heading";
 import styled from "styled-components";
 
