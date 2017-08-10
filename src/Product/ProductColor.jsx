@@ -18,27 +18,44 @@ const ColorTxt = styled.p`
   line-height: 0.9375rem;
 `;
 
-const Toggle = styled.div`
+const TogglePanel = styled.div`
   display: flex;
   padding-bottom: 2rem;
   margin-bottom: 2rem;
   border-bottom: 1px solid #c6c6c6;
 `;
 
+const ToggleButton = styled.button`
+  box-sizing: border-box;
+  display: block;
+  margin-right: 1rem;
+  border-radius: 50%;
+  font-size: 0;
+  line-height: 0;
+  cursor: pointer;
+  border: ${props => (props.active ? "1px solid #232122" : "0")};
+  padding: ${props => (props.active ? "1.1875rem" : "1.25rem")};
+  background-color: ${props => props.color};
+`;
+
+function ColorButton(props) {
+  return (
+    <ToggleButton active={props.active} color={props.color} name={props.name} type="button">
+      {props.name} color is chosen
+    </ToggleButton>
+  );
+}
+
 export default () => {
   return (
     <Colors>
       <ColorTxt>Colour: Honey</ColorTxt>
 
-      <Toggle>
-        <button className="product-color-toggler-btn color-toggle-black" type="button">
-          black color
-        </button>
+      <TogglePanel>
+        <ColorButton color="#232122" name="black" />
 
-        <button className="product-color-toggler-btn product-color-toggler-btn-active color-toggle-honey" type="button">
-          honey color
-        </button>
-      </Toggle>
+        <ColorButton active="true" color="#cfa880" name="honey" />
+      </TogglePanel>
     </Colors>
   );
 };

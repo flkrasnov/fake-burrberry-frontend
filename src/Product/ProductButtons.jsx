@@ -14,10 +14,28 @@ const Buttons = styled.div`
   }
 `;
 
+const SimpleButton = styled.button`
+  height: 3rem;
+  display: block;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+  border: 1px solid;
+  border-radius: 2px;
+  border-color: ${props => (props.color === "white" ? "#171717" : "#fff")};
+  font-family: Raleway, Helvetica Neue, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: .75rem;
+  font-weight: 400;
+  line-height: 1rem;
+  color: ${props => (props.color === "white" ? "#171717" : "#fff")};
+  background-color: ${props => (props.color === "white" ? "#fff" : "#171717")};
+`;
+
 const TextBtn = styled.button`
   display: block;
   padding: 0;
   margin-bottom: 3rem;
+  margin-top: .5rem;
   border: 0;
   font-family: Raleway, Helvetica Neue, Helvetica, sans-serif;
   font-size: .75rem;
@@ -30,15 +48,20 @@ const TextBtn = styled.button`
   cursor: pointer;
 `;
 
+function Button(props) {
+  return (
+    <SimpleButton color={props.color} value={props.value} type="button">
+      {props.value}
+    </SimpleButton>
+  );
+}
+
 export default () => {
   return (
     <Buttons>
-      <button className="product-buttons-btn product-buttons-btn-black" type="button">
-        Select a size
-      </button>
-      <button className="product-buttons-btn product-buttons-btn-white" type="button">
-        Find in store
-      </button>
+      <Button color="black" value="select a size" />
+
+      <Button color="white" value="find in store" />
 
       <TextBtn type="button">NEED SIZE HELP?</TextBtn>
     </Buttons>

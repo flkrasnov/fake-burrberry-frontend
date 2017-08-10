@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import triangle from "../assets/triangle.svg";
 
 const Button = styled.button`
   display: block;
@@ -20,7 +21,7 @@ const Button = styled.button`
     position: absolute;
     right: 0;
     top: 0;
-    background-image: url({triangle});
+    background-image: url(${triangle});
     background-repeat: no-repeat;
     background-position: center;
   }
