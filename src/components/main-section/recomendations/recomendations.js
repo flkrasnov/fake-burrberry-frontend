@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Recomendations = styled.section`
+const Recommendations = styled.section`
   padding: 0 .5rem;
 
   @media screen and (min-width: 48rem) {
@@ -76,7 +76,7 @@ const BlockPrice = styled.h5`
 
 export default () => {
   return (
-    <Recomendations>
+    <Recommendations>
       <div className="container">
         <Heading>we recommend</Heading>
       </div>
@@ -118,6 +118,6 @@ export default () => {
           </div>
         </div>
       </BlocksWrapper>
-    </Recomendations>
+    </Recommendations>
   );
 };
