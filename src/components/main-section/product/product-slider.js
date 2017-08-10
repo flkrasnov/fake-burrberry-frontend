@@ -1,28 +1,29 @@
-import React, { Component } from "react";
+import React from "react";
+import styled from "styled-components";
+
+const Slider = styled.div`
+  display: flex;
+  overflow-x: scroll;
+  margin: 0 -.5rem;
+
+  @media screen and (min-width: 48rem) {
+    margin: 0;
+  }
+`;
+
+const SliderImg = styled.img`
+  display: block;
+  width: 100%;
+  height: 100%;
+`;
 
 export default () => {
   return (
-    <div className="product-slider">
-      <img
-        className="product-slider-img"
-        src="img/img4@2x.jpg"
-        alt="gabardine coat front img"
-      />
-      <img
-        className="product-slider-img"
-        src="img/img3@2x.jpg"
-        alt="gabardine coat img 2"
-      />
-      <img
-        className="product-slider-img"
-        src="img/img2@2x.jpg"
-        alt="gabardine coat img 3"
-      />
-      <img
-        className="product-slider-img"
-        src="img/img1@2x.jpg"
-        alt="gabardine coat img 4"
-      />
-    </div>
+    <Slider>
+      <SliderImg src="img/img4@2x.jpg" alt="gabardine coat front img" />
+      <SliderImg src="img/img3@2x.jpg" alt="gabardine coat img 2" />
+      <SliderImg src="img/img2@2x.jpg" alt="gabardine coat img 3" />
+      <SliderImg src="img/img1@2x.jpg" alt="gabardine coat img 4" />
+    </Slider>
   );
 };

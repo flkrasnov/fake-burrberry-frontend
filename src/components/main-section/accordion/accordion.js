@@ -73,7 +73,7 @@ export default () => {
     <section className="accordion">
       <div className="accordion-row accordion-row-open">
         <div className="accordion-row-head">
-          <AccordionHeading heading={accordionHeadings} />
+          <AccordionHeading />
         </div>
 
         <Body>
@@ -100,7 +100,7 @@ export default () => {
 
       <div className="accordion-row">
         <div className="accordion-row-head visible-xs">
-          <AccordionHeading heading={accordionHeadings} />
+          <AccordionHeading />
         </div>
 
         <Body>
