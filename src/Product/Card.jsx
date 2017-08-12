@@ -18,6 +18,22 @@ const FlexWrapper = styled.div`
   }
 `;
 
+const Bold = styled.h4`
+  margin: 0;
+  margin-bottom: .25rem;
+  font-size: .75rem;
+  font-weight: 700;
+  line-height: 0.875rem;
+`;
+
+const Text = styled.p`
+  margin: 0;
+  margin-bottom: 1.5rem;
+  font-family: Raleway, Helvetica Neue, Helvetica, sans-serif;
+  font-size: .75rem;
+  line-height: 1rem;
+`;
+
 const ColorWrapper = styled.div`@media screen and (min-width: 62rem) {background-color: #d4bdad;}`;
 
 export default () => {
@@ -54,6 +70,10 @@ export default () => {
               <HiddenMax>
                 <TextBtn>NEED SIZE HELP?</TextBtn>
               </HiddenMax>
+              <HiddenMin>
+                <Bold>Free Next Day Delivery</Bold>
+                <Text>Order before 7pm Monday to Thursday for delivery the next day</Text>
+              </HiddenMin>
             </FlexWrapper>
           </div>
         </div>

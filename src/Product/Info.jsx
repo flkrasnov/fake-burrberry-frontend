@@ -2,6 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import Code from "../common/ProductCode";
 import { HiddenMax } from "../common/Hidden";
+import { IntlProvider, FormattedNumber, addLocaleData } from "react-intl";
+import en from "react-intl/locale-data/en";
+import ru from "react-intl/locale-data/ru";
+addLocaleData([...en, ...ru]);
 
 const Info = styled.div`
   display: flex;
@@ -32,10 +36,20 @@ const Price = styled.h2`
   }
 `;
 
+function FormattedPrice(props) {
+  return (
+    <Price>
+      <IntlProvider locale={props.locale}>
+        <FormattedNumber style="currency" currency="RUB" maximumFractionDigits={0} minimumFractionDigits={0} value={props.price} currencyDisplay="symbol" />
+      </IntlProvider>
+    </Price>
+  );
+}
+
 export default () => {
   return (
     <Info>
-      <Price>110 000 руб.</Price>
+      <FormattedPrice price={110000} locale="ru" />
       <HiddenMax>
         <Code>Item 39428531</Code>
       </HiddenMax>

@@ -7,11 +7,11 @@ const Head = styled.section`
   border-top: 1px solid #c6c6c6;
   @media screen and (min-width: 48rem) {
     padding: 0;
+    border: 0;
   }
 `;
 
 const Body = styled.div`
-  display: none;
   padding-bottom: 2rem;
 
   ul {
@@ -32,8 +32,7 @@ const Body = styled.div`
     line-height: 1.5rem;
   }
 
-  @media {
-    display: block;
+  @media screen and (min-width: 48rem) {
     padding-bottom: 1.5rem;
   }
 `;

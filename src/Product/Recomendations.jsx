@@ -1,5 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import { IntlProvider, FormattedNumber, addLocaleData } from "react-intl";
+import en from "react-intl/locale-data/en";
+import ru from "react-intl/locale-data/ru";
+addLocaleData([...en, ...ru]);
 
 const Recommendations = styled.section`
   padding: 0 .5rem;
@@ -93,7 +97,9 @@ function RecommendationBlock(props) {
         {props.name}
       </Name>
       <Price>
-        {props.price} руб.
+        <IntlProvider locale={props.locale}>
+          <FormattedNumber style="currency" currency="RUB" maximumFractionDigits={0} minimumFractionDigits={0} value={props.price} currencyDisplay="symbol" />
+        </IntlProvider>
       </Price>
     </AncorBlock>
   );
@@ -110,19 +116,19 @@ export default () => {
         <div className="container">
           <div className="row">
             <div className="col-xs-6 col-sm-3">
-              <RecommendationBlock link="/" img="img/wr1.jpg" alt="Emroided Hooded" name="Emroided Hooded Content For Three Lines" price={27000} />
+              <RecommendationBlock link="/" img="img/wr1.jpg" alt="Emroided Hooded" name="Emroided Hooded Content For Three Lines" price={27000} locale="ru" />
             </div>
 
             <div className="col-xs-6 col-sm-3">
-              <RecommendationBlock link="/" img="img/wr2.jpg" alt="Relaxed Fit Stretch Jeans" name="Relaxed Fit Stretch Jeans Content For Three Lines" price={22500} />
+              <RecommendationBlock link="/" img="img/wr2.jpg" alt="Relaxed Fit Stretch Jeans" name="Relaxed Fit Stretch Jeans Content For Three Lines" price={22500} locale="ru" />
             </div>
 
             <div className="col-xs-6 col-sm-3">
-              <RecommendationBlock link="/" img="img/wr3.jpg" alt="Leather and House" name="Leather and House Check Content For Three Lines" price={120000} />
+              <RecommendationBlock link="/" img="img/wr3.jpg" alt="Leather and House" name="Leather and House Check Content For Three Lines" price={120000} locale="ru" />
             </div>
 
             <div className="col-xs-6 col-sm-3">
-              <RecommendationBlock link="/" img="img/wr4.jpg" alt="Leather Wingtip" name="Leather Wingtip Check Content For Three Lines" price={46000} />
+              <RecommendationBlock link="/" img="img/wr4.jpg" alt="Leather Wingtip" name="Leather Wingtip Check Content For Three Lines" price={46000} locale="ru" />
             </div>
           </div>
         </div>

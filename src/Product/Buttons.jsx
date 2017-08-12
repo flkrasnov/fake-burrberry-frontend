@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import { HiddenMax, HiddenMin } from "../common/Hidden";
 
 const Buttons = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 .5rem;
-  border-bottom: 1px solid #c6c6c6;
 
   @media screen and (min-width: 48rem) {
     padding-left: 0;
@@ -37,9 +37,11 @@ const SimpleButton = styled.button`
   ${props =>
     props.primary &&
     `
-    margin-right: 1rem;
     background-color: #171717;
     color: #fff;
+    @media screen and (min-width: 62rem) {
+      margin-right: 1rem;
+    }
   `};
 
   @media screen and (min-width: 62rem) {
@@ -51,9 +53,17 @@ const SimpleButton = styled.button`
 export default () => {
   return (
     <Buttons>
-      <SimpleButton primary type="button">
-        select size
-      </SimpleButton>
+      <HiddenMax>
+        <SimpleButton primary type="button">
+          select size
+        </SimpleButton>
+      </HiddenMax>
+
+      <HiddenMin>
+        <SimpleButton primary type="button">
+          Add to cart
+        </SimpleButton>
+      </HiddenMin>
 
       <SimpleButton type="button">find in store</SimpleButton>
     </Buttons>
