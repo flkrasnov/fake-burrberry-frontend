@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import HiddenMin from "../common/HiddenMin";
+import { HiddenMin } from "../common/Hidden";
 import TextBtn from "../common/TextButton";
 
 const Sizes = styled.div`

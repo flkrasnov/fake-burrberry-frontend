@@ -1,13 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import Header from "../common/ProductHeader";
-import Slider from "./ProductSlider";
-import Info from "./ProductInfo";
-import Color from "./ProductColor";
-import Sizes from "./ProductSizes";
-import Btns from "./ProductButtons";
-import HiddenMax from "../common/HiddenMax";
-import HiddenMin from "../common/HiddenMin";
+import Slider from "./Slider";
+import Info from "./Info";
+import Color from "./Color";
+import Sizes from "./Sizes";
+import Btns from "./Buttons";
+import { HiddenMax, HiddenMin } from "../common/Hidden";
 import TextBtn from "../common/TextButton";
 
 const FlexWrapper = styled.div`

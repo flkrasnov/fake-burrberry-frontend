@@ -49,12 +49,10 @@ const Heading = styled.h2`
   }
 `;
 
-export default function(props) {
+export default function({ children }) {
   return (
     <Button type="button">
-      <Heading>
-        {props.content}
-      </Heading>
+      <Heading children={children} />
     </Button>
   );
 }

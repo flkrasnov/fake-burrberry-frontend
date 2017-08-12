@@ -1,13 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import Heading from "./AccordionHeading";
-import HiddenMin from "../common/HiddenMin";
+import { HiddenMin } from "../common/Hidden";
 
 const Head = styled.section`
+  border-top: 1px solid #c6c6c6;
   @media screen and (min-width: 48rem) {
-    .accordion-row-head {
-      padding: 0;
-    }
+    padding: 0;
   }
 `;
 
@@ -79,9 +78,9 @@ export default () => {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-md-12 col-lg-4">
+        <div className="col-sm-12 col-lg-4">
           <Head>
-            <Heading content="Description" />
+            <Heading>Description</Heading>
           </Head>
 
           <Body>
@@ -103,7 +102,7 @@ export default () => {
             </ul>
           </Body>
         </div>
-        <div className="col-md-12 col-lg-8">
+        <div className="col-sm-12 col-lg-8">
           <HiddenMin>
             <GalleryImg src="img/img1@2x.jpg" alt="Long Cotton Gabardine Coat" />
           </HiddenMin>

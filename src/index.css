@@ -1,13 +1,5 @@
 body {
-  font-size: 1rem;
-  font-family: Raleway, Helvetica Neue, Helvetica, sans-serif;
-  color: #111;
-}
-
-.accordion-row-open .accordion-row-body {
-  display: block;
-}
-
-.accordion-row-open .accordion-row-head-text::after {
-  transform: rotate(180deg);
+    font-size: 1rem;
+    font-family: Raleway, Helvetica Neue, Helvetica, sans-serif;
+    color: #111;
 }

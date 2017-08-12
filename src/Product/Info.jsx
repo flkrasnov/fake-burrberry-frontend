@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Code from "../common/ProductCode";
-import HiddenMax from "../common/HiddenMax";
+import { HiddenMax } from "../common/Hidden";
 
 const Info = styled.div`
   display: flex;
@@ -37,7 +37,7 @@ export default () => {
     <Info>
       <Price>110 000 руб.</Price>
       <HiddenMax>
-        <Code />
+        <Code>Item 39428531</Code>
       </HiddenMax>
     </Info>
   );

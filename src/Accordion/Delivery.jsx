@@ -1,18 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import Heading from "./AccordionHeading";
-import HiddenMax from "../common/HiddenMax";
+import { HiddenMax } from "../common/Hidden";
 
 const Head = styled.section`
+  border-top: 1px solid #c6c6c6;
   @media screen and (min-width: 48rem) {
-    .accordion-row-head {
-      padding: 0;
-    }
+    padding: 0;
   }
 `;
 
 const Body = styled.div`
-  display: none;
   padding-bottom: 2rem;
 
   @media screen and (min-width: 48rem) {
@@ -22,10 +20,10 @@ const Body = styled.div`
 `;
 
 const DeliveryImg = styled.img`
-  @media screen and (min-width: 48rem) {
-    display: block;
-    width: 100%;
-  }
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 `;
 
 const BodyHeading = styled.h2`
@@ -68,14 +66,14 @@ export default () => {
       <HiddenMax>
         <Head>
           <div className="container">
-            <Heading content="Description" />
+            <Heading>Delivery</Heading>
           </div>
         </Head>
       </HiddenMax>
       <Body>
         <div className="container">
           <div className="row">
-            <div className="col-xs-12 col-sm-7 col-lg-7">
+            <div className="col-xs-12 col-sm-7">
               <DeliveryImg src="img/delivery.jpg" alt="delivery image" />
             </div>
 

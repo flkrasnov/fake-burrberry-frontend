@@ -1,5 +1,5 @@
 import React from "react";
-import Product from "./Product";
+import Card from "./Card";
 import Accordion from "../Accordion";
 import Recomendations from "./Recomendations";
 import Links from "./Links";
@@ -7,7 +7,7 @@ import Links from "./Links";
 export default () => {
   return (
     <main>
-      <Product />
+      <Card />
       <Accordion />
       <Recomendations />
       <Links />

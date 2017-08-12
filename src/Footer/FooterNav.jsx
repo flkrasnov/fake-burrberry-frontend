@@ -12,7 +12,7 @@ const NavHeading = styled.nav`
   }
 `;
 
-const Ancor = styled.a`
+const Link = styled.a`
   @media screen and (min-width: 48rem) {
     display: block;
     margin-bottom: .75rem;
@@ -32,36 +32,36 @@ export default () => {
         <div className="col-md-3">
           <nav>
             <NavHeading>Customer service</NavHeading>
-            <Ancor href="/">Contact Us</Ancor>
-            <Ancor href="/">Payment</Ancor>
-            <Ancor href="/">Shipping</Ancor>
-            <Ancor href="/">Returns</Ancor>
-            <Ancor href="/">Faqs</Ancor>
-            <Ancor href="/">Live Chat</Ancor>
-            <Ancor href="/">The Burberry App</Ancor>
-            <Ancor href="/">Store Location</Ancor>
+            <Link href="/">Contact Us</Link>
+            <Link href="/">Payment</Link>
+            <Link href="/">Shipping</Link>
+            <Link href="/">Returns</Link>
+            <Link href="/">Faqs</Link>
+            <Link href="/">Live Chat</Link>
+            <Link href="/">The Burberry App</Link>
+            <Link href="/">Store Location</Link>
           </nav>
         </div>
 
         <div className="col-md-3">
           <nav>
             <NavHeading>Our Company</NavHeading>
-            <Ancor href="/">Our History</Ancor>
-            <Ancor href="/">Burberry Group Plc</Ancor>
-            <Ancor href="/">Careers</Ancor>
-            <Ancor href="/">Corporate Responsibility</Ancor>
-            <Ancor href="/">Site Map</Ancor>
+            <Link href="/">Our History</Link>
+            <Link href="/">Burberry Group Plc</Link>
+            <Link href="/">Careers</Link>
+            <Link href="/">Corporate Responsibility</Link>
+            <Link href="/">Site Map</Link>
           </nav>
         </div>
 
         <div className="col-md-3">
           <nav>
             <NavHeading>Legal & Cookies</NavHeading>
-            <Ancor href="/">Terms & Conditions</Ancor>
-            <Ancor href="/">Privacy Policy</Ancor>
-            <Ancor href="/">Cookie Policy</Ancor>
-            <Ancor href="/">Accessibility Statement</Ancor>
-            <Ancor href="/">Japan Only - SCTL indications</Ancor>
+            <Link href="/">Terms & Conditions</Link>
+            <Link href="/">Privacy Policy</Link>
+            <Link href="/">Cookie Policy</Link>
+            <Link href="/">Accessibility Statement</Link>
+            <Link href="/">Japan Only - SCTL indications</Link>
           </nav>
         </div>
       </div>
