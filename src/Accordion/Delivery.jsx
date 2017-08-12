@@ -37,6 +37,15 @@ const BodyHeading = styled.h2`
   line-height: 1.1875rem;
 `;
 
+const FlexWrapper = styled.div`
+  @media screen and (min-width: 62rem) {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+`;
+
 const Bold = styled.h4`
   margin: 0;
   margin-bottom: .25rem;
@@ -71,7 +80,7 @@ export default () => {
             </div>
 
             <div className="col-xs-12 col-sm-5 col-lg-4 col-lg-offset-1">
-              <div>
+              <FlexWrapper>
                 <BodyHeading>DELIVERY</BodyHeading>
 
                 <Bold>Free Next Day Delivery</Bold>
@@ -85,7 +94,7 @@ export default () => {
 
                 <Bold>Free Gift Packaging</Bold>
                 <Text>Discover our gift packaging, a gold lined box tied with a coloured ribbon</Text>
-              </div>
+              </FlexWrapper>
             </div>
           </div>
         </div>

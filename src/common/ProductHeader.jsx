@@ -35,7 +35,7 @@ const Text = styled.div`
 export default () => {
   return (
     <Heading>
-      <Text>Long Cotton Gabardine Car Coat</Text>
+      <Text>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Text>
     </Heading>
   );
 };
