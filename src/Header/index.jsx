@@ -15,6 +15,12 @@ const Logo = styled.img`
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
   }
+
+  @media screen and (min-width: 62rem) {
+    height: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 `;
 
 export default () => {

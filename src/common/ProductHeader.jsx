@@ -24,6 +24,12 @@ const Text = styled.div`
     font-size: 1.5rem;
     line-height: 1.8125rem;
   }
+
+  @media screen and (min-width: 62rem) {
+    margin: 0;
+    margin-bottom: .5rem;
+    line-height: 1.75rem;
+  }
 `;
 
 export default () => {

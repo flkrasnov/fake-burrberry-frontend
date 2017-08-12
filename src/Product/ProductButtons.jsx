@@ -12,6 +12,10 @@ const Buttons = styled.div`
     padding-right: 0;
     border-bottom: 0;
   }
+
+  @media screen and (min-width: 62rem) {
+    flex-direction: row;
+  }
 `;
 
 const SimpleButton = styled.button`
@@ -20,46 +24,38 @@ const SimpleButton = styled.button`
   padding: 1rem 0;
   margin-bottom: 1rem;
   border: 1px solid;
+  border-color: #171717;
   border-radius: 2px;
-  border-color: ${props => (props.color === "white" ? "#171717" : "#fff")};
   font-family: Raleway, Helvetica Neue, Helvetica, sans-serif;
   text-transform: uppercase;
   font-size: .75rem;
   font-weight: 400;
   line-height: 1rem;
-  color: ${props => (props.color === "white" ? "#171717" : "#fff")};
-  background-color: ${props => (props.color === "white" ? "#fff" : "#171717")};
-`;
-
-const TextBtn = styled.button`
-  display: block;
-  padding: 0;
-  margin-bottom: 3rem;
-  margin-top: .5rem;
-  border: 0;
-  font-family: Raleway, Helvetica Neue, Helvetica, sans-serif;
-  font-size: .75rem;
-  line-height: 1rem;
-  text-align: left;
-  text-decoration: none;
-  text-transform: uppercase;
-  background: none;
   color: #171717;
-  cursor: pointer;
+  background-color: transparent;
+
+  ${props =>
+    props.primary &&
+    `
+    margin-right: 1rem;
+    background-color: #171717;
+    color: #fff;
+  `};
+
+  @media screen and (min-width: 62rem) {
+    flex-basis: 100%;
+    margin-bottom: 1.5rem;
+  }
 `;
 
 export default () => {
   return (
     <Buttons>
-      <SimpleButton color="black" type="button">
+      <SimpleButton primary type="button">
         select size
       </SimpleButton>
 
-      <SimpleButton color="white" type="button">
-        find in store
-      </SimpleButton>
-
-      <TextBtn type="button">NEED SIZE HELP?</TextBtn>
+      <SimpleButton type="button">find in store</SimpleButton>
     </Buttons>
   );
 };

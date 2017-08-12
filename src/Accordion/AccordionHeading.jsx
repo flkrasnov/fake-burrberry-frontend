@@ -43,14 +43,18 @@ const Heading = styled.h2`
   @media screen and (min-width: 48rem) {
     margin: 1.5rem 0 1rem;
   }
+
+  @media screen and (min-width: 62rem) {
+    margin-top: 0;
+  }
 `;
 
-export default () => {
+export default function(props) {
   return (
-    <div className="container">
-      <Button type="button">
-        <Heading>Description</Heading>
-      </Button>
-    </div>
+    <Button type="button">
+      <Heading>
+        {props.content}
+      </Heading>
+    </Button>
   );
-};
+}

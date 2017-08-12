@@ -9,6 +9,10 @@ const Slider = styled.div`
   @media screen and (min-width: 48rem) {
     margin: 0;
   }
+
+  @media screen and (min-width: 62rem) {
+    overflow-x: hidden;
+  }
 `;
 
 const SliderImg = styled.img`

@@ -18,44 +18,58 @@ const ColorTxt = styled.p`
   line-height: 0.9375rem;
 `;
 
-const TogglePanel = styled.div`
+const ColorPanel = styled.div`
   display: flex;
   padding-bottom: 2rem;
   margin-bottom: 2rem;
   border-bottom: 1px solid #c6c6c6;
+
+  @media screen and (min-width: 62rem) {
+    margin-bottom: 0;
+    padding-bottom: 1.5rem;
+  }
 `;
 
-const ToggleButton = styled.button`
+const Button = styled.button`
   box-sizing: border-box;
   display: block;
+  padding: 1.25rem;
   margin-right: 1rem;
+  border: 0;
   border-radius: 50%;
   font-size: 0;
   line-height: 0;
   cursor: pointer;
-  border: ${props => (props.active ? "1px solid #232122" : "0")};
-  padding: ${props => (props.active ? "1.1875rem" : "1.25rem")};
   background-color: ${props => props.color};
+
+  ${props =>
+    props.active &&
+    `
+    padding: 1.1875rem;
+    border: 1px solid #232122;
+  `};
 `;
 
 function ColorButton(props) {
   return (
-    <ToggleButton active={props.active} color={props.color} name={props.name} type="button">
+    <Button active={props.active} color={props.color} name={props.name} type="button">
       choose {props.name} color
-    </ToggleButton>
+    </Button>
   );
 }
 
 export default () => {
   return (
     <Colors>
-      <ColorTxt>Colour: Honey</ColorTxt>
+      <ColorTxt>
+        Colour: <b>Honey</b>
+      </ColorTxt>
 
-      <TogglePanel>
+      <ColorPanel>
         <ColorButton color="#232122" name="black" />
 
-        <ColorButton active="true" color="#cfa880" name="honey" />
-      </TogglePanel>
+        <ColorButton active color="#cfa880" name="honey" />
+      </ColorPanel>
     </Colors>
   );
 };

@@ -12,20 +12,24 @@ const Recommendations = styled.section`
 `;
 
 const Heading = styled.h2`
-  display: inline-block;
-  padding-bottom: .5rem;
+  display: block;
   margin-top: 3rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.1875rem;
-  border-bottom: 1px solid #111;
   text-transform: uppercase;
 
   @media screen and (min-width: 48rem) {
     margin-top: 0;
     margin-bottom: 1rem;
     line-height: 1.1875rem;
+  }
+
+  @media screen and (min-width: 48rem) {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
   }
 `;
 
@@ -63,6 +67,13 @@ const Name = styled.h3`
 
   @media screen and (min-width: 48rem) {
     line-height: 1.2;
+  }
+
+  @media screen and (min-width: 62rem) {
+    font-family: Raleway, Helvetica Neue, Helvetica, sans-serif;
+    font-size: .75rem;
+    line-height: 1.25rem;
+    font-weight: 600;
   }
 `;
 

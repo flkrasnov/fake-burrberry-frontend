@@ -4,31 +4,10 @@ body {
   color: #111;
 }
 
-.visible-xs {
-  display: block;
-}
-
-/* left 4 props */
-
-/* product-buttons end */
-
-/* product accordion */
-
 .accordion-row-open .accordion-row-body {
   display: block;
 }
 
 .accordion-row-open .accordion-row-head-text::after {
   transform: rotate(180deg);
-}
-
-/* product accordion end */
-
-@media screen and (min-width: 48rem) {
-  .visible-xs {
-    display: none;
-  }
-  .accordion-row-head {
-    padding: 0;
-  }
 }

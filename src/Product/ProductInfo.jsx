@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import Code from "../common/ProductCode";
+import HiddenMax from "../common/HiddenMax";
 
 const Info = styled.div`
   display: flex;
@@ -23,15 +25,10 @@ const Price = styled.h2`
   @media screen and (min-width: 48rem) {
     margin-top: 0;
   }
-`;
 
-const Code = styled.p`
-  margin: 1rem 0;
-  font-size: .75rem;
-  line-height: 0.875rem;
-
-  @media screen and (min-width: 48rem) {
-    margin-top: 0;
+  @media screen and (min-width: 62rem) {
+    font-weight: 500;
+    margin-bottom: 3rem;
   }
 `;
 
@@ -39,7 +36,9 @@ export default () => {
   return (
     <Info>
       <Price>110 000 руб.</Price>
-      <Code>Item 39428531</Code>
+      <HiddenMax>
+        <Code />
+      </HiddenMax>
     </Info>
   );
 };
