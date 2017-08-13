@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Code from "../common/ProductCode";
-import { DesctopHidden } from "../common/Hidden";
+import { HiddenLg } from "../common/Hidden";
 import { FormattedNumber } from "react-intl";
 
 const Info = styled.div`
@@ -45,9 +45,9 @@ export default () => {
   return (
     <Info>
       <FormattedPrice price={110000} locale="ru" />
-      <DesctopHidden>
+      <HiddenLg>
         <Code>Item 39428531</Code>
-      </DesctopHidden>
+      </HiddenLg>
     </Info>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Heading from "./AccordionHeading";
-import { DesctopVisible } from "../common/Hidden";
+import { VisibleLg } from "../common/Hidden";
 
 const Head = styled.section`
   border-top: 1px solid #c6c6c6;
@@ -102,13 +102,13 @@ export default () => {
           </Body>
         </div>
         <div className="col-sm-12 col-lg-8">
-          <DesctopVisible>
+          <VisibleLg>
             <GalleryImg src="img/img1@2x.jpg" alt="Long Cotton Gabardine Coat" />
-          </DesctopVisible>
+          </VisibleLg>
         </div>
-        <DesctopVisible>
+        <VisibleLg>
           <Gallery />
-        </DesctopVisible>
+        </VisibleLg>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Heading from "./AccordionHeading";
-import { DesctopHidden, DesctopVisible } from "../common/Hidden";
+import { HiddenLg, VisibleLg } from "../common/Hidden";
 
 const Head = styled.section`
   border-top: 1px solid #c6c6c6;
@@ -63,13 +63,13 @@ const Text = styled.p`
 export default () => {
   return (
     <div>
-      <DesctopHidden>
+      <HiddenLg>
         <Head>
           <div className="container">
             <Heading>Delivery</Heading>
           </div>
         </Head>
-      </DesctopHidden>
+      </HiddenLg>
       <Body>
         <div className="container">
           <div className="row">
@@ -79,9 +79,9 @@ export default () => {
 
             <div className="col-xs-12 col-sm-5 col-lg-4 col-lg-offset-1">
               <Wrapper>
-                <DesctopVisible>
+                <VisibleLg>
                   <BodyHeading>DELIVERY</BodyHeading>
-                </DesctopVisible>
+                </VisibleLg>
 
                 <Bold>Free Next Day Delivery</Bold>
                 <Text>Order before 7pm Monday to Thursday for delivery the next day</Text>

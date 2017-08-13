@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { DesctopHidden, DesctopVisible } from "../common/Hidden";
+import { HiddenLg, VisibleLg } from "../common/Hidden";
 
 const Buttons = styled.div`
   display: flex;
@@ -53,17 +53,17 @@ const SimpleButton = styled.button`
 export default () => {
   return (
     <Buttons>
-      <DesctopHidden>
+      <HiddenLg>
         <SimpleButton primary type="button">
           select size
         </SimpleButton>
-      </DesctopHidden>
+      </HiddenLg>
 
-      <DesctopVisible>
+      <VisibleLg>
         <SimpleButton primary type="button">
           Add to cart
         </SimpleButton>
-      </DesctopVisible>
+      </VisibleLg>
 
       <SimpleButton type="button">find in store</SimpleButton>
     </Buttons>
