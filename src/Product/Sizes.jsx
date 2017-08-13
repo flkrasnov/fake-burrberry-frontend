@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { HiddenMin } from "../common/Hidden";
+import { DesctopVisible } from "../common/Hidden";
 import TextBtn from "../common/TextButton";
 
 const Sizes = styled.div`
@@ -70,9 +70,9 @@ export default () => {
           Size: <b>XL</b>
         </SizeTxt>
 
-        <HiddenMin>
+        <DesctopVisible>
           <TextButton>NEED SIZE HELP?</TextButton>
-        </HiddenMin>
+        </DesctopVisible>
       </FlexBetween>
 
       <SizePanel>

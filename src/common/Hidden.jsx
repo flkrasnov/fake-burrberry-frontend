@@ -1,12 +1,12 @@
 import React from "react";
 import Responsive from "react-responsive";
 
-function HiddenMax({ children }) {
+function DesctopHidden({ children }) {
   return <Responsive maxWidth={991} children={children} />;
 }
 
-function HiddenMin({ children }) {
+function DesctopVisible({ children }) {
   return <Responsive minWidth={992} children={children} />;
 }
 
-export { HiddenMin, HiddenMax };
+export { DesctopHidden, DesctopVisible };

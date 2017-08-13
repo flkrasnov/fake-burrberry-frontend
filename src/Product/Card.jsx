@@ -6,7 +6,7 @@ import Info from "./Info";
 import Color from "./Color";
 import Sizes from "./Sizes";
 import Btns from "./Buttons";
-import { HiddenMax, HiddenMin } from "../common/Hidden";
+import { DesctopHidden, DesctopVisible } from "../common/Hidden";
 import TextBtn from "../common/TextButton";
 
 const FlexWrapper = styled.div`
@@ -42,9 +42,9 @@ export default () => {
       <div className="container">
         <div className="row">
           <div className="col-xs-12">
-            <HiddenMax>
+            <DesctopHidden>
               <Header />
-            </HiddenMax>
+            </DesctopHidden>
           </div>
 
           <div className="col-xs-12 col-sm-7 col-md-6">
@@ -53,9 +53,9 @@ export default () => {
 
           <div className="col-xs-12 col-sm-5 col-md-6">
             <FlexWrapper>
-              <HiddenMin>
+              <DesctopVisible>
                 <Header />
-              </HiddenMin>
+              </DesctopVisible>
               <Info />
               <div className="row">
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6">
@@ -67,13 +67,13 @@ export default () => {
               </div>
               <Btns />
 
-              <HiddenMax>
+              <DesctopHidden>
                 <TextBtn>NEED SIZE HELP?</TextBtn>
-              </HiddenMax>
-              <HiddenMin>
+              </DesctopHidden>
+              <DesctopVisible>
                 <Bold>Free Next Day Delivery</Bold>
                 <Text>Order before 7pm Monday to Thursday for delivery the next day</Text>
-              </HiddenMin>
+              </DesctopVisible>
             </FlexWrapper>
           </div>
         </div>

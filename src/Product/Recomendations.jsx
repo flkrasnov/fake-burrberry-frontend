@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { IntlProvider, FormattedNumber, addLocaleData } from "react-intl";
-import en from "react-intl/locale-data/en";
-import ru from "react-intl/locale-data/ru";
-addLocaleData([...en, ...ru]);
+import { FormattedNumber } from "react-intl";
 
 const Recommendations = styled.section`
   padding: 0 .5rem;
@@ -97,9 +94,7 @@ function RecommendationBlock(props) {
         {props.name}
       </Name>
       <Price>
-        <IntlProvider locale={props.locale}>
-          <FormattedNumber style="currency" currency="RUB" maximumFractionDigits={0} minimumFractionDigits={0} value={props.price} currencyDisplay="symbol" />
-        </IntlProvider>
+        <FormattedNumber style="currency" currency="RUB" maximumFractionDigits={0} minimumFractionDigits={0} value={props.price} currencyDisplay="symbol" />
       </Price>
     </AncorBlock>
   );

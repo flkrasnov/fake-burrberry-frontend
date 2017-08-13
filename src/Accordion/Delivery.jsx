@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Heading from "./AccordionHeading";
-import { HiddenMax, HiddenMin } from "../common/Hidden";
+import { DesctopHidden, DesctopVisible } from "../common/Hidden";
 
 const Head = styled.section`
   border-top: 1px solid #c6c6c6;
@@ -35,7 +35,7 @@ const BodyHeading = styled.h2`
   line-height: 1.1875rem;
 `;
 
-const FlexWrapper = styled.div`
+const Wrapper = styled.div`
   @media screen and (min-width: 62rem) {
     height: 100%;
     display: flex;
@@ -63,13 +63,13 @@ const Text = styled.p`
 export default () => {
   return (
     <div>
-      <HiddenMax>
+      <DesctopHidden>
         <Head>
           <div className="container">
             <Heading>Delivery</Heading>
           </div>
         </Head>
-      </HiddenMax>
+      </DesctopHidden>
       <Body>
         <div className="container">
           <div className="row">
@@ -78,10 +78,10 @@ export default () => {
             </div>
 
             <div className="col-xs-12 col-sm-5 col-lg-4 col-lg-offset-1">
-              <FlexWrapper>
-                <HiddenMin>
+              <Wrapper>
+                <DesctopVisible>
                   <BodyHeading>DELIVERY</BodyHeading>
-                </HiddenMin>
+                </DesctopVisible>
 
                 <Bold>Free Next Day Delivery</Bold>
                 <Text>Order before 7pm Monday to Thursday for delivery the next day</Text>
@@ -94,7 +94,7 @@ export default () => {
 
                 <Bold>Free Gift Packaging</Bold>
                 <Text>Discover our gift packaging, a gold lined box tied with a coloured ribbon</Text>
-              </FlexWrapper>
+              </Wrapper>
             </div>
           </div>
         </div>
