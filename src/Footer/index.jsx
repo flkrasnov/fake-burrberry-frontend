@@ -90,8 +90,10 @@ export default () =>
       <FooterNav />
     </Nav>{' '}
     <div className="container">
-      <ShippingButton type="button"> Shipping country: Russian Federation </ShippingButton>{' '}
-      <LangButton type="button"> Language: English </LangButton> <Help> Need help ? </Help>{' '}
-      <MoreAncor href="/"> Find out more and contact us </MoreAncor>{' '}
-    </div>{' '}
+      <ShippingButton type="button">Shipping country: Russian Federation</ShippingButton>
+      <LangButton type="button">Language: English</LangButton>
+
+      <Help>Need help?</Help>
+      <MoreAncor href="/">Find out more and contact us</MoreAncor>
+    </div>
   </Footer>);

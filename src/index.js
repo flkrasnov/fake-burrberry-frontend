@@ -18,5 +18,5 @@ const App = () =>
     </div>
   </Router>);
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Products />, document.getElementById('root'));
 registerServiceWorker();
