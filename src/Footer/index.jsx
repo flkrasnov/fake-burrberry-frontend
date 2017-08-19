@@ -3,12 +3,8 @@ import styled from 'styled-components';
 import FooterNav from './FooterNav';
 
 const Footer = styled.footer`
-  padding: 2rem .5rem;
+  padding: 2rem 0;
   background: #f3f3f3;
-
-  @media screen and (min-width: 48rem) {
-    padding: 2rem 0;
-  }
 `;
 
 const Nav = styled.div`
@@ -29,7 +25,7 @@ const ShippingButton = styled.button`
   font-size: .75rem;
   line-height: 1rem;
   background: none;
-  color: #999999;
+  color: #999;
 
   @media screen and (min-width: 48rem) {
     display: inline-block;
@@ -88,12 +84,11 @@ const MoreAncor = styled.a`
   }
 `;
 
-export default () => (
-  <Footer>
+export default () =>
+  (<Footer>
     <Nav>
       <FooterNav />
-    </Nav>
-
+    </Nav>{' '}
     <div className="container">
       <ShippingButton type="button">Shipping country: Russian Federation</ShippingButton>
       <LangButton type="button">Language: English</LangButton>
@@ -101,5 +96,4 @@ export default () => (
       <Help>Need help?</Help>
       <MoreAncor href="/">Find out more and contact us</MoreAncor>
     </div>
-  </Footer>
-);
+  </Footer>);
