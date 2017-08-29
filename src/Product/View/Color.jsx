@@ -1,6 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+
+const colorIncome = [
+  {
+    name: 'honey',
+    color: '#cfa880',
+  },
+  {
+    name: 'blue',
+    color: 'lightblue',
+  },
+  {
+    name: 'green',
+    color: 'orange',
+  },
+];
 
 const Colors = styled.div``;
 
@@ -20,6 +35,7 @@ const ColorPanel = styled.div`
   @media screen and (min-width: 62rem) {
     margin-bottom: 0;
     padding-bottom: 1.5rem;
+    border-bottom: 0;
   }
 `;
 
@@ -34,32 +50,64 @@ const Button = styled.button`
   line-height: 0;
   cursor: pointer;
   background-color: ${props => props.color};
-
-  ${props =>
-    props.active &&
-    `
-    padding: 1.1875rem;
-    border: 1px solid #232122;
-  `};
+  outline: 0;
 `;
 
-function ColorButton(props) {
-  return (
-    <Button active={props.active} color={props.color} name={props.name} type="button">
-      choose {props.name} color
-    </Button>
-  );
+class ColorButtonInside extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isSelected: false,
+    };
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState(prevState => ({
+      isSelected: !prevState.isSelected,
+    }));
+  }
+
+  render() {
+    return (
+      <Button
+        key={this.props.name}
+        onClick={this.handleClick}
+        active={this.state.isSelected}
+        type="button"
+        color={this.props.color}
+        name={this.props.name}
+        style={{
+          border: this.state.isSelected ? '1px solid #232122' : '1px solid transparent',
+        }}
+      >
+        {this.props.children}
+      </Button>
+    );
+  }
 }
 
-ColorButton.propTypes = {
-  active: PropTypes.bool.isRequired,
-  color: PropTypes.string.isRequired,
+ColorButtonInside.propTypes = {
   name: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
-ColorButton.defaultProps = {
-  active: false,
-};
+function ColorPalette() {
+  const colorSet = colorIncome.map(singleColor =>
+    (<ColorButtonInside key={singleColor.name} color={singleColor.color} name={singleColor.name}>
+      choose {singleColor.name} color
+    </ColorButtonInside>),
+  );
+
+  return (
+    <ColorPanel>
+      {colorSet}
+    </ColorPanel>
+  );
+}
 
 export default () =>
   (<Colors>
@@ -67,9 +115,5 @@ export default () =>
       Colour: <b>Honey</b>
     </ColorTxt>
 
-    <ColorPanel>
-      <ColorButton color="#232122" name="black" />
-
-      <ColorButton active color="#cfa880" name="honey" />
-    </ColorPanel>
+    <ColorPalette />
   </Colors>);

@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { VisibleLg } from '../../common/Responsive';
 import TextBtn from '../../common/TextButton';
+
+const sizesIncome = ['S', 'M', 'L', 'XL', 'XXL'];
 
 const Sizes = styled.div`
   display: none;
@@ -52,31 +54,57 @@ const Button = styled.button`
   text-transform: uppercase;
   cursor: pointer;
   background-color: transparent;
-
-  ${props =>
-    props.active &&
-    `
-    font-weight: 700;
-  `};
+  outline: 0;
 `;
 
 const TextButton = TextBtn.extend`margin: 0;`;
 
-function SizeButton(props) {
+function SizeButtons() {
+  const button = sizesIncome.map(singleSize =>
+    (<SizeButton key={singleSize.toString()}>
+      {singleSize}
+    </SizeButton>),
+  );
+
   return (
-    <Button active={props.active} name={props.name} type="button">
-      {props.name}
-    </Button>
+    <SizePanel>
+      {button}
+    </SizePanel>
   );
 }
 
-SizeButton.propTypes = {
-  active: PropTypes.bool.isRequired,
-  name: PropTypes.string.isRequired,
-};
+class SizeButton extends Component {
+  constructor(props) {
+    super(props);
 
-SizeButton.defaultProps = {
-  active: false,
+    this.state = {
+      isSelected: false,
+    };
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState(prevState => ({
+      isSelected: !prevState.isSelected,
+    }));
+  }
+
+  render() {
+    return (
+      <Button
+        onClick={this.handleClick}
+        type="button"
+        style={{ fontWeight: this.state.isSelected ? 700 : 400 }}
+      >
+        {this.props.children}
+      </Button>
+    );
+  }
+}
+
+SizeButton.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default () =>
@@ -92,12 +120,6 @@ export default () =>
     </FlexBetween>
 
     <SizePanel>
-      <SizeButton name="s" />
-
-      <SizeButton name="m" />
-
-      <SizeButton name="l" />
-
-      <SizeButton active name="xl" />
+      <SizeButtons />
     </SizePanel>
   </Sizes>);

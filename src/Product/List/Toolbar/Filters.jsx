@@ -1,45 +1,60 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
-import chevron from '../../../assets/arrow.svg';
+import Dropdown from './Filter';
 
-const Toolbar = styled.div`display: flex;`;
+const Wrapper = styled.div`display: flex;`;
 
-const Button = styled.button`
-  display: block;
-  padding: 1.5rem 0;
-  margin-right: 1rem;
-  font-family: Raleway, Helvetica Neue, Helvetica, sans-serif;
-  font-size: .75rem;
-  line-height: 1rem;
-  border: none;
-  white-space: nowrap;
-  background: transparent;
-  color: #171717;
-
-  &:after {
-    content: "";
-    display: inline-block;
-    width: 12px;
-    height: 6px;
-    margin-left: .5rem;
-    background-image: url(${chevron});
-    background-size: cover;
+class Toolbar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      color: '#171717',
+    };
+    this.onDropdown = this.onDropdown.bind(this);
   }
 
-  @media screen and (min-width: 48rem) {
-    margin-right: 3rem;
-
-    &:last-child {
-      margin: 0;
-      margin-left: auto;
-    }
+  onDropdown() {
+    this.setState(this.state.color === '#171717' ? { color: '#999' } : { color: '#171717' });
   }
-`;
 
-export default () =>
-  (<Toolbar>
-    <Button type="button">Category</Button>
-    <Button type="button">Colour</Button>
-    <Button type="button">Size</Button>
-    <Button type="button">Sort by price</Button>
-  </Toolbar>);
+  render() {
+    return (
+      <Wrapper>
+        <Dropdown value="Category" color={this.state.color} action={this.onDropdown}>
+          <div>
+            Content content content content content content content content content content content
+            content content content content content content content content content content content
+            content content content content content content content content content content content
+            content content content content content content content content content
+          </div>
+        </Dropdown>
+        <Dropdown value="Colour" color={this.state.color} action={this.onDropdown}>
+          <div>
+            Content content content content content content content content content content content
+            content content content content content content content content content content content
+            content content content content content content content content content content content
+            content content content content content content content content content
+          </div>
+        </Dropdown>
+        <Dropdown value="Size" color={this.state.color} action={this.onDropdown}>
+          <div>
+            Content content content content content content content content content content content
+            content content content content content content content content content content content
+            content content content content content content content content content content content
+            content content content content content content content content content
+          </div>
+        </Dropdown>
+        <Dropdown
+          align="right"
+          value="Sort by price"
+          color={this.state.color}
+          action={this.onDropdown}
+        >
+          <div>high or low it’s medium length of content</div>
+        </Dropdown>
+      </Wrapper>
+    );
+  }
+}
+
+export default Toolbar;
