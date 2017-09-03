@@ -1,45 +1,101 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
-import chevron from '../../../assets/arrow.svg';
+import PropTypes from 'prop-types';
+import Dropdown from './Filter';
 
-const Toolbar = styled.div`display: flex;`;
-
-const Button = styled.button`
-  display: block;
-  padding: 1.5rem 0;
-  margin-right: 1rem;
-  font-family: Raleway, Helvetica Neue, Helvetica, sans-serif;
-  font-size: .75rem;
-  line-height: 1rem;
-  border: none;
-  white-space: nowrap;
-  background: transparent;
-  color: #171717;
-
-  &:after {
-    content: "";
-    display: inline-block;
-    width: 12px;
-    height: 6px;
-    margin-left: .5rem;
-    background-image: url(${chevron});
-    background-size: cover;
-  }
-
+const Wrapper = styled.div`
+  display: flex;
+  position: relative;
   @media screen and (min-width: 48rem) {
-    margin-right: 3rem;
-
-    &:last-child {
-      margin: 0;
-      margin-left: auto;
-    }
+    position: static;
   }
 `;
 
-export default () =>
-  (<Toolbar>
-    <Button type="button">Category</Button>
-    <Button type="button">Colour</Button>
-    <Button type="button">Size</Button>
-    <Button type="button">Sort by price</Button>
-  </Toolbar>);
+class Filters extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      color: '#171717',
+      isOpened: false,
+    };
+
+    this.onDropdown = this.onDropdown.bind(this);
+    this.changeDropdownState = this.changeDropdownState.bind(this);
+  }
+
+  onDropdown() {
+    this.setState({
+      isOpened: false,
+    });
+    this.setState(this.state.isOpened ? { color: 'red' } : { color: 'blue' });
+  }
+
+  changeDropdownState(value) {
+    this.setState({ isOpened: value });
+  }
+
+  render() {
+    return (
+      <Wrapper>
+        <Dropdown
+          value="Category"
+          color={this.state.color}
+          handleDropdown={this.onDropdown}
+          changeState={this.props.changeState}
+          changeLocalState={this.changeDropdownState}
+        >
+          <div>
+            Content content content content content content content content content content content
+            content content content content content content content content content content content
+            content content content content content content content content content content content
+            content content content content content content content content content
+          </div>
+        </Dropdown>
+        <Dropdown
+          value="Colour"
+          color={this.state.color}
+          handleDropdown={this.onDropdown}
+          changeState={this.props.changeState}
+          changeLocalState={this.changeDropdownState}
+        >
+          <div>
+            Content content content content content content content content content content content
+            content content content content content content content content content content content
+            content content content content content content content content content content content
+            content content content content content content content content content
+          </div>
+        </Dropdown>
+        <Dropdown
+          value="Size"
+          color={this.state.color}
+          handleDropdown={this.onDropdown}
+          changeState={this.props.changeState}
+          changeLocalState={this.changeDropdownState}
+        >
+          <div>
+            Content content content content content content content content content content content
+            content content content content content content content content content content content
+            content content content content content content content content content content content
+            content content content content content content content content content
+          </div>
+        </Dropdown>
+        <Dropdown
+          align="right"
+          value="Sort by price"
+          color={this.state.color}
+          handleDropdown={this.onDropdown}
+          changeState={this.props.changeState}
+          changeLocalState={this.changeDropdownState}
+        >
+          <div>high or low it’s medium length of content</div>
+        </Dropdown>
+      </Wrapper>
+    );
+  }
+}
+
+Filters.propTypes = {
+  changeState: PropTypes.func.isRequired,
+};
+
+export default Filters;

@@ -1,25 +1,41 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
+
+const colorData = [
+  {
+    name: 'Honey',
+    color: '#cfa880',
+  },
+  {
+    name: 'Blue',
+    color: 'lightblue',
+  },
+  {
+    name: 'Orange',
+    color: 'orange',
+  },
+];
 
 const Colors = styled.div``;
 
 const ColorTxt = styled.p`
   margin-top: 0;
   margin-bottom: 1rem;
-  font-size: .75rem;
+  font-size: 0.75rem;
   line-height: 1rem;
 `;
 
 const ColorPanel = styled.div`
   display: flex;
+  flex-wrap: wrap;
   padding-bottom: 2rem;
   margin-bottom: 2rem;
   border-bottom: 1px solid #c6c6c6;
 
   @media screen and (min-width: 62rem) {
     margin-bottom: 0;
-    padding-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 0;
   }
 `;
 
@@ -28,48 +44,57 @@ const Button = styled.button`
   display: block;
   padding: 1.25rem;
   margin-right: 1rem;
+  margin-bottom: 1rem;
   border: 0;
   border-radius: 50%;
   font-size: 0;
   line-height: 0;
   cursor: pointer;
   background-color: ${props => props.color};
-
-  ${props =>
-    props.active &&
-    `
-    padding: 1.1875rem;
-    border: 1px solid #232122;
-  `};
+  outline: 0;
+  border: ${props => (props.active ? '1px solid #232122' : '1px solid transparent')};
 `;
 
-function ColorButton(props) {
-  return (
-    <Button active={props.active} color={props.color} name={props.name} type="button">
-      choose {props.name} color
-    </Button>
-  );
+class ColorPalette extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      selectedColor: 0,
+    };
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(e) {
+    const id = Number(e.target.id);
+    this.setState({ selectedColor: id });
+  }
+
+  render() {
+    const colorSet = colorData.map((singleColor, key) => (
+      <Button
+        type="button"
+        key={key.toString()}
+        onClick={this.handleClick}
+        color={singleColor.color}
+        name={singleColor.name}
+        active={this.state.selectedColor === key}
+      >
+        choose {singleColor.name} color
+      </Button>
+    ));
+
+    return (
+      <Colors>
+        <ColorTxt>
+          Colour: <b>{colorData[this.state.selectedColor].name}</b>
+        </ColorTxt>
+
+        <ColorPanel>{colorSet}</ColorPanel>
+      </Colors>
+    );
+  }
 }
 
-ColorButton.propTypes = {
-  active: PropTypes.bool.isRequired,
-  color: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-};
-
-ColorButton.defaultProps = {
-  active: false,
-};
-
-export default () =>
-  (<Colors>
-    <ColorTxt>
-      Colour: <b>Honey</b>
-    </ColorTxt>
-
-    <ColorPanel>
-      <ColorButton color="#232122" name="black" />
-
-      <ColorButton active color="#cfa880" name="honey" />
-    </ColorPanel>
-  </Colors>);
+export default ColorPalette;

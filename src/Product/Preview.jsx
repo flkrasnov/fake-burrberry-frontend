@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { FormattedNumber } from 'react-intl';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import like from '../assets/like.svg';
+import LikeButton from './Like';
 
 const Wrapper = styled.div`margin-bottom: 2rem;`;
 
@@ -22,36 +22,24 @@ const Img = styled.img`
 const More = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 `;
 
 const Fit = styled.p`
   display: block;
   margin: 0;
-  font-size: .75rem;
+  font-size: 0.75rem;
   line-height: 1rem;
 `;
 
-const Like = styled.button`
-  display: block;
-  width: 14px;
-  height: 14px;
-  padding: 0;
-  margin: 0;
-  margin-left: .5rem;
-  border: 0;
-  background-color: transparent;
-  background-image: url(${like});
-`;
-
 const Name = styled.h3`
-  margin: 0 0 .5rem;
-  font-size: .75rem;
+  margin: 0 0 0.5rem;
+  font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 600;
 
   @media screen and (min-width: 48rem) {
-    font-size: .875rem;
+    font-size: 0.875rem;
     line-height: 1.25rem;
   }
 
@@ -64,8 +52,8 @@ const Name = styled.h3`
 
 const Colors = styled.p`
   margin: 0;
-  margin-bottom: .5rem;
-  font-size: .75rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
   line-height: 1rem;
 `;
 
@@ -76,41 +64,41 @@ const ColorsCount = styled.span`
 
 const Price = styled.h5`
   margin: 0;
-  font-size: .75rem;
-  line-height: .875rem;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
   font-weight: 400;
 `;
 
 function Preview(props) {
   const LikeModule = () =>
-    (props.label != null
-      ? <div>
+    (props.label != null ? (
+      <div>
         <More>
-          <Fit>
-            {props.label}
-          </Fit>
-          <Like />
+          <Fit>{props.label}</Fit>
+          <LikeButton width="15px" height="15px" />
         </More>
         <Name>
-          <Ancor to={`${props.to}`}>
-            {props.name}
-          </Ancor>
+          <Ancor to={`${props.to}`}>{props.name}</Ancor>
         </Name>
       </div>
-      : <More>
-        <Like />
-      </More>);
+    ) : (
+      <More>
+        <Name>
+          <Ancor to={`${props.to}`}>{props.name}</Ancor>
+        </Name>
+        <LikeButton width="15px" height="15px" />
+      </More>
+    ));
 
   const ColorsModule = () =>
-    props.colorsCount > 0 &&
-    <Colors>
-      Available in&nbsp;
-      <ColorsCount>
-        <Ancor to={`${props.to}`}>
-          {props.colorsCount}&nbsp; colors
-        </Ancor>
-      </ColorsCount>
-    </Colors>;
+    props.colorsCount > 0 && (
+      <Colors>
+        Available in&nbsp;
+        <ColorsCount>
+          <Ancor to={`${props.to}`}>{props.colorsCount}&nbsp; colors</Ancor>
+        </ColorsCount>
+      </Colors>
+    );
 
   return (
     <Wrapper>
